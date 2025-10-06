@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# ⚖️ Molinar’slayer
+# ⚖️ Molinar’s Layer
 
 Sitio web del despacho legal construido con Django, internacionalización ES/EN, arquitectura modular por apps y plantillas reutilizables. Elegante, rápido y listo para crecer.  
 
