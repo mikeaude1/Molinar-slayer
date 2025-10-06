@@ -1,0 +1,128 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+{% trans "About Us" %}
+{% endblock title %}
+{% block styles%}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/portal/aboutus.css' %}" />
+{% endblock styles %}
+{% block content %}
+<div class="main-bg">
+</div>
+  <div class="about-section card">
+          <h1 class="about-title ">{% trans "About Us" %}</h1>
+          <p class="main-desc">{% trans "Founded in 1995, the firm aims to provide quality advice and legal representation to domestic and foreign clients seeking to do business in our country. We offer our services through a team of lawyers committed to meeting our clients' needs. We have therefore strived to build a first-class firm and provide excellent service, with transparency, ethics, trust, and the solidity of 20 years of experience behind us." %}</p>
+
+      </div>
+      <article class="about-section">
+        <div class="carousel">
+          <div class="carousel-item active">
+            <div class="slide-image">
+              <img src="{% static 'images/mission.jpg' %}" alt="{% trans 'Mission' %}">
+            </div>
+            <div class="slide-content">
+              <header class="slide-header">
+                <h2 class="about-title">{% trans "Mission" %}</h2>
+              </header>
+              <div class="slide-body">
+                <p class="main-desc">{% trans "To provide quality advice and legal representation to domestic and foreign clients seeking to do business in our country. "%}<br>
+                {% trans "We strive to meet our clients' needs and build a first-class firm, with transparency, ethics, trust, and the solidity of 20 years of experience." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide-image">
+              <img src="{% static 'images/vision.jpg' %}" alt="{% trans 'Vision' %}">
+            </div>
+            <div class="slide-content">
+              <header class="slide-header">
+                <h2 class="about-title">{% trans "Vision" %}</h2>
+              </header>
+              <div class="slide-body">
+                <p class="main-desc">{% trans "To be a leading firm in the field of criminal defense, known for our quality service, transparency, ethics, trust, and the solidity of 20 years of experience. "%}<br>
+                {% trans "We aim to provide our clients with the best possible service, and to build a strong relationship based on trust and transparency." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide-image">
+              <img src="{% static 'images/values.jpg' %}" alt="{% trans 'Values' %}">
+            </div>
+            <div class="slide-content">
+              <header class="slide-header">
+                <h2 class="about-title">{% trans "Values" %}</h2>
+              </header>
+              <div class="slide-body">
+                <ul>
+                  <li>{% trans "Quality" %}</li>
+                  <li>{% trans "Transparency" %}</li>
+                  <li>{% trans "Ethics" %}</li>
+                  <li>{% trans "Trust" %}</li>
+                  <li>{% trans "20 Years of Experience" %}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators"></div>
+        </div>
+        <script>
+          (function() {
+            const carousel = document.querySelector('.carousel');
+            const items = carousel.querySelectorAll('.carousel-item');
+            const indicatorsContainer = carousel.querySelector('.carousel-indicators');
+
+            let current = 0;
+
+            // Crear indicadores dinámicamente según la cantidad de slides
+            items.forEach((_, i) => {
+              const btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'indicator' + (i === 0 ? ' active' : '');
+              btn.setAttribute('aria-label', `Slide ${i + 1}`);
+              btn.addEventListener('click', () => {
+                current = i;
+                show(current);
+                resetTimer();
+              });
+              indicatorsContainer.appendChild(btn);
+            });
+
+            function show(index) {
+              items.forEach((el, i) => {
+                if (i === index) {
+                  el.classList.add('active');
+                } else {
+                  el.classList.remove('active');
+                }
+              });
+              const indicators = indicatorsContainer.querySelectorAll('.indicator');
+              indicators.forEach((ind, i) => {
+                if (i === index) {
+                  ind.classList.add('active');
+                } else {
+                  ind.classList.remove('active');
+                }
+              });
+            }
+
+            show(current);
+
+            function next() {
+              current = (current + 1) % items.length;
+              show(current);
+            }
+
+            let timer = setInterval(next, 6000);
+
+            function resetTimer() {
+              clearInterval(timer);
+              timer = setInterval(next, 6000);
+            }
+          })();
+        </script>
+      </article>
+
+
+{% endblock content %}

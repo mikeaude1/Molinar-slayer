@@ -1,0 +1,60 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Derecho Mercantil/Corporativo" %}{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/practiceareas/practiceareas.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="content_fullwidth">
+  <div class="container">
+
+    <div class="content_left">
+      <div class="blog_post">
+        <div class="blog_postcontent">
+          <div class="image_frame">
+            <a href="#"><img src="{% static 'images/derechomercantil.jpg' %}" alt="{% trans 'Mercantil/Corporativo' %}"></a>
+          </div>
+          <h3><a href="#">{% trans "Derecho Mercantil/Corporativo" %}</a></h3>
+
+          <div class="clearfix"></div>
+          <div class="margin_top1"></div>
+          <h4>{% trans "Sociedades y Gobierno Corporativo" %}</h4>
+          <p>{% blocktrans %}Constitución de sociedades, reformas estatutarias, asambleas y cumplimiento corporativo.{% endblocktrans %}</p>
+          <h4>{% trans "Contratos Comerciales" %}</h4>
+          <p>{% blocktrans %}Negociación y redacción de contratos de suministro, distribución, agencia y franquicia.{% endblocktrans %}</p>
+          <h4>{% trans "Fusiones y Adquisiciones (M&A)" %}</h4>
+          <p>{% blocktrans %}Due diligence, estructuración, negociación y cierre de operaciones de compra-venta.{% endblocktrans %}</p>
+          <h4>{% trans "Insolvencia y Reestructura" %}</h4>
+          <p>{% blocktrans %}Estrategias de reestructura, concursos mercantiles y recuperación de créditos.{% endblocktrans %}</p>
+          <h4>{% trans "Cumplimiento y Prevención de Riesgos" %}</h4>
+          <p>{% blocktrans %}Mapeo y mitigación de riesgos legales, políticas internas y capacitación.{% endblocktrans %}</p>
+        </div>
+      </div><!-- /# end post -->
+
+      <div class="clearfix divider_line9 lessm"></div>
+      <div class="clearfix mar_top2"></div>
+    </div><!-- end content left side -->
+
+    <!-- right sidebar starts -->
+    <div class="right_sidebar">
+      <div class="sidebar_widget">
+        <div class="sidebar_title"><h4>{% trans "Áreas" %} <i>{% trans "de Práctica" %}</i></h4></div>
+        <ul class="arrows_list1">
+          <li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>
+        </ul>
+      </div><!-- end section -->
+    </div><!-- end right sidebar -->
+
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,112 @@
+{% extends "includes/base.html" %} {% load i18n %} {% load static %} {% block
+title %}{% trans "Jesus Molinar Alcaraz - Criminal Defense Lawyer" %}{% endblock
+%} {% block styles%}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+{% endblock styles %} {% block content %}
+<div class="main-bg">
+  <div class="main-content">
+    <h1 class="main-title">{% trans "Justice, Diligence, and Results" %}</h1>
+    <p class="main-desc">
+      {% trans "Your trusted advocate in criminal defense. Get the expert legal" %}
+      {% trans "representation you deserve." %}
+    </p>
+    <a class="main-btn" href="#contact"
+      >{% trans "Request a Free Consultation" %}</a
+    >
+  </div>
+</div>
+<div class="about-section card">
+  <h2 class="about-title">{% trans "About Jesus Molinar Alcaraz" %}</h2>
+  <p class="about-text">
+    {% trans "Jesus Molinar Alcaraz is a seasoned criminal defense attorney with" %}
+    {% trans "a proven track record of success. His expertise covers a wide" %}
+    {% trans "range of criminal cases, from misdemeanors to serious felonies." %}
+    {% trans "With a commitment to justice and client advocacy, Jesus provides" %}
+    {% trans "personalized and aggressive defense strategies tailored to each" %}
+    {% trans "unique case." %}
+  </p>
+  <a type="button" class="about-btn" href="{% url 'aboutus' %}"> {% trans "Go to About Us" %}</a>
+</div>
+<div class="practice-section">
+  <h2 class="practice-title">{% trans "Practice Areas" %}</h2>
+  <div class="practice-list">
+    <div class="practice-item card">
+      <svg
+        fill="currentColor"
+        height="24"
+        viewBox="0 0 256 256"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,..."
+        />
+      </svg>
+      <span>{% trans "Criminal Defense" %}</span>
+    </div>
+    <div class="practice-item card">
+      <svg
+        fill="currentColor"
+        height="24"
+        viewBox="0 0 256 256"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"
+        />
+      </svg>
+      <span>{% trans "DUI Defense" %}</span>
+    </div>
+    <div class="practice-item card">
+      <svg
+        fill="currentColor"
+        height="24"
+        viewBox="0 0 256 256"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M243.32,116.69l-16-16a16,16,0,0,0-20.84-1.53L156.84,49.52a16,16,0,0,0-1.52-20.84l-16-16a16,16,0,0,0-22.63,0l-64,64a16,16,0,0,0,0,22.63l16,16a16,16,0,0,0,20.83,1.52L96.69,124,31.31,189.38A25,25,0,0,0,66.63,224.7L132,159.32l7.17,7.16a16,16,0,0,0,1.52,20.84l16,16a16,16,0,0,0,22.63,0l64-64a16,16,0,0,0,0-22.63Z"
+        />
+      </svg>
+      <span>{% trans "Appeals" %}</span>
+    </div>
+  </div>
+  <a type="button" class="practice-btn" href="{% url 'practiceareas:practiceareas' %}"> {% trans "see more" %}</a>
+</div>
+<div class="contact-section card" id="contact">
+  <h2 class="contact-title">{% trans "Request a Consultation" %}</h2>
+  <div class="contact-form">
+    <form>
+      <label class="form-label">
+        <span>{% trans "Name" %}</span>
+        <input
+          class="form-input"
+          placeholder="{% trans 'Your name' %}"
+          type="text"
+        />
+      </label>
+      <label class="form-label">
+        <span>{% trans "Email" %}</span>
+        <input
+          class="form-input"
+          placeholder="{% trans 'Your email' %}"
+          type="email"
+        />
+      </label>
+      <label class="form-label">
+        <span>{% trans "Message" %}</span>
+        <textarea
+          class="form-textarea"
+          placeholder="{% trans 'Tell us about your case' %}"
+        ></textarea>
+      </label>
+      <button class="contact-btn" type="submit">
+        {% trans "Send Request" %}
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

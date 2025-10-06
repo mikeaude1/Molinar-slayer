@@ -1,0 +1,1 @@
+# Make 'apps' a Python package so Django can import apps via the 'apps.' namespace.

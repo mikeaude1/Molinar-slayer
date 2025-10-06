@@ -1,0 +1,586 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-05 19:51-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Jesus Molinar Alcaraz - Criminal Defense Lawyer"
+msgstr "Jesús Molinar Alcaraz - Abogado Penalista"
+
+msgid "Jesus Molinar Alcaraz"
+msgstr "Jesús Molinar Alcaraz"
+
+msgid "All Rights Reserved."
+msgstr "Todos los derechos reservados."
+
+msgid "Disclaimer: The information on this website is for general information"
+msgstr ""
+"Aviso legal: La información en este sitio web es solo para información "
+"general"
+
+msgid "purposes only. Nothing on this site should be taken as legal advice for"
+msgstr "y no debe considerarse asesoría legal para"
+
+msgid "any individual case or situation."
+msgstr "ningún caso o situación individual."
+
+msgid "JMA"
+msgstr "JMA"
+
+msgid "Iniciar sesión"
+msgstr "Iniciar sesión"
+
+msgid "home"
+msgstr ""
+
+msgid "Acerca de nosotros"
+msgstr "Acerca de nosotros"
+
+msgid "Áreas de Práctica"
+msgstr ""
+
+msgid "Español"
+msgstr "Español"
+
+msgid "English"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Message"
+#~ msgid "Messages"
+#~ msgstr "Mensaje"
+
+#~ msgid "Derecho Civil"
+#~ msgstr "Derecho Civil"
+
+#~ msgid "Contratos"
+#~ msgstr "Contratos"
+
+#~ msgid ""
+#~ "Redacción, revisión y negociación de contratos civiles; interpretación de "
+#~ "cláusulas, cumplimiento y resolución de controversias contractuales."
+#~ msgstr ""
+#~ "Redacción, revisión y negociación de contratos civiles; interpretación de "
+#~ "cláusulas, cumplimiento y resolución de controversias contractuales."
+
+#~ msgid "Responsabilidad Civil"
+#~ msgstr "Responsabilidad Civil"
+
+#~ msgid ""
+#~ "Reclamaciones por daño y perjuicio, responsabilidad objetiva y subjetiva, "
+#~ "asesoría en prevención y reparación de daños."
+#~ msgstr ""
+#~ "Reclamaciones por daño y perjuicio, responsabilidad objetiva y subjetiva, "
+#~ "asesoría en prevención y reparación de daños."
+
+#~ msgid "Propiedad y Bienes"
+#~ msgstr "Propiedad y Bienes"
+
+#~ msgid ""
+#~ "Propiedad, posesión y servidumbres; acciones reivindicatorias, deslinde y "
+#~ "asesoría en transmisión de bienes."
+#~ msgstr ""
+#~ "Propiedad, posesión y servidumbres; acciones reivindicatorias, deslinde y "
+#~ "asesoría en transmisión de bienes."
+
+#~ msgid "Sucesiones"
+#~ msgstr "Sucesiones"
+
+#~ msgid ""
+#~ "Testamentos, sucesión legítima, juicios sucesorios y administración de "
+#~ "herencias."
+#~ msgstr ""
+#~ "Testamentos, sucesión legítima, juicios sucesorios y administración de "
+#~ "herencias."
+
+#~ msgid "Solución de Controversias (Litigio y MASC)"
+#~ msgstr "Solución de Controversias (Litigio y MASC)"
+
+#~ msgid ""
+#~ "Estrategia de litigio civil, mediación y conciliación, preparación de "
+#~ "evidencia y ejecución de sentencias."
+#~ msgstr ""
+#~ "Estrategia de litigio civil, mediación y conciliación, preparación de "
+#~ "evidencia y ejecución de sentencias."
+
+#~ msgid "Derecho Penal"
+#~ msgstr "Derecho Penal"
+
+#~ msgid "Defensa Penal"
+#~ msgstr "Defensa Penal"
+
+#~ msgid ""
+#~ "Asesoría y representación en todas las etapas del proceso penal, desde "
+#~ "investigación inicial hasta juicio oral."
+#~ msgstr ""
+#~ "Asesoría y representación en todas las etapas del proceso penal, desde "
+#~ "investigación inicial hasta juicio oral."
+
+#~ msgid "Delitos Económicos"
+#~ msgstr "Delitos Económicos"
+
+#~ msgid ""
+#~ "Fraude, abuso de confianza, operaciones ilícitas; defensa y prevención en "
+#~ "entornos corporativos."
+#~ msgstr ""
+#~ "Fraude, abuso de confianza, operaciones ilícitas; defensa y prevención en "
+#~ "entornos corporativos."
+
+#~ msgid "Medidas Cautelares"
+#~ msgstr "Medidas Cautelares"
+
+#~ msgid ""
+#~ "Audiencias y solicitudes de medidas cautelares, revisión y modificación, "
+#~ "protección de derechos."
+#~ msgstr ""
+#~ "Audiencias y solicitudes de medidas cautelares, revisión y modificación, "
+#~ "protección de derechos."
+
+#~ msgid "Juicio de Amparo"
+#~ msgstr "Juicio de Amparo"
+
+#~ msgid ""
+#~ "Promoción de juicios de amparo contra actos de autoridad que vulneren "
+#~ "derechos fundamentales."
+#~ msgstr ""
+#~ "Promoción de juicios de amparo contra actos de autoridad que vulneren "
+#~ "derechos fundamentales."
+
+#~ msgid "Compliance Penal"
+#~ msgstr "Compliance Penal"
+
+#~ msgid ""
+#~ "Diseño e implementación de programas de cumplimiento para prevenir "
+#~ "riesgos penales en organizaciones."
+#~ msgstr ""
+#~ "Diseño e implementación de programas de cumplimiento para prevenir "
+#~ "riesgos penales en organizaciones."
+
+#~ msgid "Derecho Familiar"
+#~ msgstr "Derecho Familiar"
+
+#~ msgid "Divorcio"
+#~ msgstr "Divorcio"
+
+#~ msgid ""
+#~ "Divorcio voluntario y necesario, convenios, liquidación de sociedad "
+#~ "conyugal y acuerdos patrimoniales."
+#~ msgstr ""
+#~ "Divorcio voluntario y necesario, convenios, liquidación de sociedad "
+#~ "conyugal y acuerdos patrimoniales."
+
+#~ msgid "Guarda y Custodia"
+#~ msgstr "Guarda y Custodia"
+
+#~ msgid ""
+#~ "Procedimientos sobre guarda, custodia y convivencias, priorizando el "
+#~ "interés superior de niñas y niños."
+#~ msgstr ""
+#~ "Procedimientos sobre guarda, custodia y convivencias, priorizando el "
+#~ "interés superior de niñas y niños."
+
+#~ msgid "Pensión alimenticia"
+#~ msgstr "Pensión alimenticia"
+
+#~ msgid ""
+#~ "Fijación, actualización y ejecución de pensiones alimenticias; medidas de "
+#~ "apremio."
+#~ msgstr ""
+#~ "Fijación, actualización y ejecución de pensiones alimenticias; medidas de "
+#~ "apremio."
+
+#~ msgid "Adopciones"
+#~ msgstr "Adopciones"
+
+#~ msgid "Asesoría integral en procesos de adopción nacional e internacional."
+#~ msgstr "Asesoría integral en procesos de adopción nacional e internacional."
+
+#~ msgid "Violencia familiar"
+#~ msgstr "Violencia familiar"
+
+#~ msgid ""
+#~ "Órdenes de protección, medidas urgentes y acompañamiento legal y "
+#~ "psicológico."
+#~ msgstr ""
+#~ "Órdenes de protección, medidas urgentes y acompañamiento legal y "
+#~ "psicológico."
+
+#~ msgid "Derecho Mercantil/Corporativo"
+#~ msgstr "Derecho Mercantil/Corporativo"
+
+#~ msgid "Sociedades y Gobierno Corporativo"
+#~ msgstr "Sociedades y Gobierno Corporativo"
+
+#~ msgid ""
+#~ "Constitución de sociedades, reformas estatutarias, asambleas y "
+#~ "cumplimiento corporativo."
+#~ msgstr ""
+#~ "Constitución de sociedades, reformas estatutarias, asambleas y "
+#~ "cumplimiento corporativo."
+
+#~ msgid "Contratos Comerciales"
+#~ msgstr "Contratos Comerciales"
+
+#~ msgid ""
+#~ "Negociación y redacción de contratos de suministro, distribución, agencia "
+#~ "y franquicia."
+#~ msgstr ""
+#~ "Negociación y redacción de contratos de suministro, distribución, agencia "
+#~ "y franquicia."
+
+#~ msgid "Fusiones y Adquisiciones (M&A)"
+#~ msgstr "Fusiones y Adquisiciones (M&A)"
+
+#~ msgid ""
+#~ "Due diligence, estructuración, negociación y cierre de operaciones de "
+#~ "compra-venta."
+#~ msgstr ""
+#~ "Due diligence, estructuración, negociación y cierre de operaciones de "
+#~ "compra-venta."
+
+#~ msgid "Insolvencia y Reestructura"
+#~ msgstr "Insolvencia y Reestructura"
+
+#~ msgid ""
+#~ "Estrategias de reestructura, concursos mercantiles y recuperación de "
+#~ "créditos."
+#~ msgstr ""
+#~ "Estrategias de reestructura, concursos mercantiles y recuperación de "
+#~ "créditos."
+
+#~ msgid "Cumplimiento y Prevención de Riesgos"
+#~ msgstr "Cumplimiento y Prevención de Riesgos"
+
+#~ msgid ""
+#~ "Mapeo y mitigación de riesgos legales, políticas internas y capacitación."
+#~ msgstr ""
+#~ "Mapeo y mitigación de riesgos legales, políticas internas y capacitación."
+
+#~ msgid "Derecho Laboral"
+#~ msgstr "Derecho Laboral"
+
+#~ msgid "Relaciones individuales de trabajo"
+#~ msgstr "Relaciones individuales de trabajo"
+
+#~ msgid ""
+#~ "Contratación, terminación, modificación de condiciones y estrategias de "
+#~ "prevención de conflictos."
+#~ msgstr ""
+#~ "Contratación, terminación, modificación de condiciones y estrategias de "
+#~ "prevención de conflictos."
+
+#~ msgid "Cumplimiento y auditorías"
+#~ msgstr "Cumplimiento y auditorías"
+
+#~ msgid ""
+#~ "Auditorías laborales, cumplimiento con la LFT, NOMs y políticas internas."
+#~ msgstr ""
+#~ "Auditorías laborales, cumplimiento con la LFT, NOMs y políticas internas."
+
+#~ msgid "Litigio laboral"
+#~ msgstr "Litigio laboral"
+
+#~ msgid ""
+#~ "Defensa ante tribunales laborales y conciliación; estrategias probatorias "
+#~ "y negociación."
+#~ msgstr ""
+#~ "Defensa ante tribunales laborales y conciliación; estrategias probatorias "
+#~ "y negociación."
+
+#~ msgid "Seguridad e higiene"
+#~ msgstr "Seguridad e higiene"
+
+#~ msgid ""
+#~ "Cumplimiento de normas de seguridad y salud en el trabajo, inspecciones y "
+#~ "programas preventivos."
+#~ msgstr ""
+#~ "Cumplimiento de normas de seguridad y salud en el trabajo, inspecciones y "
+#~ "programas preventivos."
+
+#~ msgid "Negociación colectiva"
+#~ msgstr "Negociación colectiva"
+
+#~ msgid ""
+#~ "Relación con sindicatos, contratos colectivos, revisiones y gestión de "
+#~ "conflictos."
+#~ msgstr ""
+#~ "Relación con sindicatos, contratos colectivos, revisiones y gestión de "
+#~ "conflictos."
+
+#~ msgid "Derecho Fiscal"
+#~ msgstr "Derecho Fiscal"
+
+#~ msgid "Litigio Fiscal"
+#~ msgstr "Litigio Fiscal"
+
+#~ msgid ""
+#~ "Nuestra firma cuenta con una sólida práctica de litigio fiscal respecto a "
+#~ "cualquier controversia que se suscite con autoridades federales, "
+#~ "estatales y locales, incluyendo auditorias en impuestos internos y de "
+#~ "comercio exterior, actos administrativos, procedimientos sancionadores, "
+#~ "resoluciones que niegan el reembolso de impuestos y leyes que violan las "
+#~ "garantías individuales de los contribuyentes."
+#~ msgstr ""
+#~ "Nuestra firma cuenta con una sólida práctica de litigio fiscal respecto a "
+#~ "cualquier controversia que se suscite con autoridades federales, "
+#~ "estatales y locales, incluyendo auditorias en impuestos internos y de "
+#~ "comercio exterior, actos administrativos, procedimientos sancionadores, "
+#~ "resoluciones que niegan el reembolso de impuestos y leyes que violan las "
+#~ "garantías individuales de los contribuyentes."
+
+#~ msgid "Impuestos Internacionales"
+#~ msgstr "Impuestos Internacionales"
+
+#~ msgid ""
+#~ "Contamos con vasta experiencia asesorando a clientes en transacciones "
+#~ "internacionales, buscando siempre ofrecer estructuras que les permitan "
+#~ "ser más eficientes. Nuestros abogados cuentan con experiencia asesorando "
+#~ "a la industria maquiladora que generalmente involucra operaciones "
+#~ "transnacionales. Contar con experiencia contable nos permite dar una "
+#~ "mejor asesoría a nuestros clientes tomando siempre en cuenta el aspecto "
+#~ "financiero y actuando dentro del marco de las Normas de Información "
+#~ "Financieras Internacionales."
+#~ msgstr ""
+#~ "Contamos con vasta experiencia asesorando a clientes en transacciones "
+#~ "internacionales, buscando siempre ofrecer estructuras que les permitan "
+#~ "ser más eficientes. Nuestros abogados cuentan con experiencia asesorando "
+#~ "a la industria maquiladora que generalmente involucra operaciones "
+#~ "transnacionales. Contar con experiencia contable nos permite dar una "
+#~ "mejor asesoría a nuestros clientes tomando siempre en cuenta el aspecto "
+#~ "financiero y actuando dentro del marco de las Normas de Información "
+#~ "Financieras Internacionales."
+
+#~ msgid "Transacciones"
+#~ msgstr "Transacciones"
+
+#~ msgid ""
+#~ "Nuestros abogados cuentan con experiencia asesorando en reorganizaciones, "
+#~ "fusiones, escisiones, compra y venta de negocios y otras transferencias "
+#~ "que involucran cuestiones fiscales."
+#~ msgstr ""
+#~ "Nuestros abogados cuentan con experiencia asesorando en reorganizaciones, "
+#~ "fusiones, escisiones, compra y venta de negocios y otras transferencias "
+#~ "que involucran cuestiones fiscales."
+
+#~ msgid "Seguridad Social"
+#~ msgstr "Seguridad Social"
+
+#~ msgid ""
+#~ "Nuestros servicios incluyen asesoría y litigio en materia de seguridad "
+#~ "social. Asesoramos a empresas en el cumplimiento de sus obligaciones "
+#~ "obrero patronales, determinación de prestaciones que tengan menor impacto "
+#~ "fiscal, elaboración de planes de previsión social y en auditorias que se "
+#~ "hayan iniciado en su contra."
+#~ msgstr ""
+#~ "Nuestros servicios incluyen asesoría y litigio en materia de seguridad "
+#~ "social. Asesoramos a empresas en el cumplimiento de sus obligaciones "
+#~ "obrero patronales, determinación de prestaciones que tengan menor impacto "
+#~ "fiscal, elaboración de planes de previsión social y en auditorias que se "
+#~ "hayan iniciado en su contra."
+
+#~ msgid "Impuestos Maquiladora"
+#~ msgstr "Impuestos Maquiladora"
+
+#~ msgid ""
+#~ "Nuestros servicios se extienden a la recuperación de saldos a favor "
+#~ "mediante la solicitud de devolución o compensación que se solicite a las "
+#~ "autoridades fiscales. Determinación del Impuesto al Valor Agregado e "
+#~ "Impuesto Sobre la Renta y aplicación de incentivos. Nuestra experiencia "
+#~ "en este sector nos ha permitido asesorar a nuestros clientes de manera "
+#~ "efectiva para mantener su estatus de maquila mediante el cumplimiento de "
+#~ "diversas regulaciones gubernamentales."
+#~ msgstr ""
+#~ "Nuestros servicios se extienden a la recuperación de saldos a favor "
+#~ "mediante la solicitud de devolución o compensación que se solicite a las "
+#~ "autoridades fiscales. Determinación del Impuesto al Valor Agregado e "
+#~ "Impuesto Sobre la Renta y aplicación de incentivos. Nuestra experiencia "
+#~ "en este sector nos ha permitido asesorar a nuestros clientes de manera "
+#~ "efectiva para mantener su estatus de maquila mediante el cumplimiento de "
+#~ "diversas regulaciones gubernamentales."
+
+#~ msgid "Áreas"
+#~ msgstr "Áreas"
+
+#~ msgid "de Práctica"
+#~ msgstr "de Práctica"
+
+#~ msgid "Civil"
+#~ msgstr "Civil"
+
+#~ msgid "Penal"
+#~ msgstr "Penal"
+
+#~ msgid "Laboral"
+#~ msgstr "Laboral"
+
+#~ msgid "Fiscal"
+#~ msgstr "Fiscal"
+
+# Home page (index.html)
+#~ msgid "Justice, Diligence, and Results"
+#~ msgstr "Justicia, diligencia y resultados"
+
+#~ msgid "Your trusted advocate in criminal defense. Get the expert legal"
+#~ msgstr ""
+#~ "Su abogado de confianza en defensa penal. Obtenga la representación legal "
+#~ "experta"
+
+#~ msgid "representation you deserve."
+#~ msgstr "que merece."
+
+#~ msgid "Request a Free Consultation"
+#~ msgstr "Solicitar una consulta gratuita"
+
+#~ msgid "About Jesus Molinar Alcaraz"
+#~ msgstr "Acerca de Jesús Molinar Alcaraz"
+
+#~ msgid "Jesus Molinar Alcaraz is a seasoned criminal defense attorney with"
+#~ msgstr "Jesús Molinar Alcaraz es un abogado penalista experimentado con"
+
+#~ msgid "a proven track record of success. His expertise covers a wide"
+#~ msgstr "un historial comprobado de éxito. Su experiencia abarca una amplia"
+
+#~ msgid "range of criminal cases, from misdemeanors to serious felonies."
+#~ msgstr "gama de casos penales, desde delitos menores hasta delitos graves."
+
+#~ msgid "With a commitment to justice and client advocacy, Jesus provides"
+#~ msgstr ""
+#~ "Con un compromiso con la justicia y la defensa del cliente, Jesús ofrece"
+
+#~ msgid "personalized and aggressive defense strategies tailored to each"
+#~ msgstr "estrategias de defensa personalizadas y agresivas adaptadas a cada"
+
+#~ msgid "unique case."
+#~ msgstr "caso único."
+
+#~ msgid "Go to About Us"
+#~ msgstr "Ir a Acerca de nosotros"
+
+#~ msgid "Practice Areas"
+#~ msgstr "Áreas de Práctica"
+
+#~ msgid "Criminal Defense"
+#~ msgstr "Defensa Penal"
+
+#~ msgid "DUI Defense"
+#~ msgstr "Defensa por DUI"
+
+#~ msgid "Appeals"
+#~ msgstr "Apelaciones"
+
+#~ msgid "see more"
+#~ msgstr "ver más"
+
+#~ msgid "Request a Consultation"
+#~ msgstr "Solicitar una consulta"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Your name"
+#~ msgstr "Su nombre"
+
+#~ msgid "Email"
+#~ msgstr "Correo electrónico"
+
+#~ msgid "Your email"
+#~ msgstr "Su correo electrónico"
+
+#~ msgid "Message"
+#~ msgstr "Mensaje"
+
+#~ msgid "Tell us about your case"
+#~ msgstr "Cuéntenos sobre su caso"
+
+#~ msgid "Send Request"
+#~ msgstr "Enviar solicitud"
+
+# About Us page (aboutus.html)
+#~ msgid "About Us"
+#~ msgstr "Acerca de nosotros"
+
+#~ msgid ""
+#~ "Founded in 1995, the firm aims to provide quality advice and legal "
+#~ "representation to domestic and foreign clients seeking to do business in "
+#~ "our country. We offer our services through a team of lawyers committed to "
+#~ "meeting our clients' needs. We have therefore strived to build a first-"
+#~ "class firm and provide excellent service, with transparency, ethics, "
+#~ "trust, and the solidity of 20 years of experience behind us."
+#~ msgstr ""
+#~ "Fundada en 1995, la firma tiene como objetivo brindar asesoría y "
+#~ "representación legal de calidad a clientes nacionales y extranjeros que "
+#~ "buscan hacer negocios en nuestro país. Ofrecemos nuestros servicios a "
+#~ "través de un equipo de abogados comprometidos con atender las necesidades "
+#~ "de nuestros clientes. Por ello, nos hemos esforzado por construir una "
+#~ "firma de primera clase y brindar un servicio excelente, con "
+#~ "transparencia, ética, confianza y la solidez de 20 años de experiencia "
+#~ "que nos respaldan."
+
+#~ msgid "Mission"
+#~ msgstr "Misión"
+
+#~ msgid ""
+#~ "To provide quality advice and legal representation to domestic and "
+#~ "foreign clients seeking to do business in our country. "
+#~ msgstr ""
+#~ "Brindar asesoría y representación legal de calidad a clientes nacionales "
+#~ "y extranjeros que buscan hacer negocios en nuestro país. "
+
+#~ msgid ""
+#~ "We strive to meet our clients' needs and build a first-class firm, with "
+#~ "transparency, ethics, trust, and the solidity of 20 years of experience."
+#~ msgstr ""
+#~ "Nos esforzamos por satisfacer las necesidades de nuestros clientes y "
+#~ "construir una firma de primera clase, con transparencia, ética, confianza "
+#~ "y la solidez de 20 años de experiencia."
+
+#~ msgid "Vision"
+#~ msgstr "Visión"
+
+#~ msgid ""
+#~ "To be a leading firm in the field of criminal defense, known for our "
+#~ "quality service, transparency, ethics, trust, and the solidity of 20 "
+#~ "years of experience. "
+#~ msgstr ""
+#~ "Ser una firma líder en el campo de la defensa penal, reconocida por "
+#~ "nuestro servicio de calidad, transparencia, ética, confianza y la solidez "
+#~ "de 20 años de experiencia. "
+
+#~ msgid ""
+#~ "We aim to provide our clients with the best possible service, and to "
+#~ "build a strong relationship based on trust and transparency."
+#~ msgstr ""
+#~ "Nuestro objetivo es brindar a nuestros clientes el mejor servicio posible "
+#~ "y construir una relación sólida basada en la confianza y la transparencia."
+
+#~ msgid "Values"
+#~ msgstr "Valores"
+
+#~ msgid "Quality"
+#~ msgstr "Calidad"
+
+#~ msgid "Transparency"
+#~ msgstr "Transparencia"
+
+#~ msgid "Ethics"
+#~ msgstr "Ética"
+
+#~ msgid "Trust"
+#~ msgstr "Confianza"
+
+#~ msgid "20 Years of Experience"
+#~ msgstr "20 años de experiencia"

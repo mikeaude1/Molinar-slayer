@@ -1,0 +1,28 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Merriweather:wght@400;700;900&amp;family=Roboto:wght@300;400;500"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <title>
+      {% block title %}{% trans "Jesus Molinar Alcaraz - Criminal Defense Lawyer" %}{% endblock title %}
+    </title>
+    {% block styles%}
+    <link rel="stylesheet" href="/static/css/styles.css">
+    {% endblock styles %}
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
+    {% include "includes/header.html" %}
+    <div class="flex flex-col min-h-screen">
+      <main class="flex-grow">{% block content %}{% endblock content%}</main>
+      {% include "includes/footer.html" %}
+    </div>
+  </body>
+</html>

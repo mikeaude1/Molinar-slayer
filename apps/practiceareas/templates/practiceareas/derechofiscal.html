@@ -1,0 +1,64 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Derecho Fiscal" %}{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/practiceareas/practiceareas.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="content_fullwidth">
+  <div class="container">
+
+    <div class="content_left">
+      <div class="blog_post">
+        <div class="blog_postcontent">
+          <div class="image_frame">
+            <a href="#"><img src="{% static 'images/derechofiscal.jpg' %}" alt="{% trans 'Fiscal' %}"></a>
+          </div>
+          <h3><a href="#">{% trans "Derecho Fiscal" %}</a></h3>
+
+          <div class="clearfix"></div>
+          <div class="margin_top1"></div>
+          <h4>{% trans "Litigio Fiscal" %}</h4>
+<p>{% blocktrans %}Nuestra firma cuenta con una sólida práctica de litigio fiscal respecto a cualquier controversia que se suscite con autoridades federales, estatales y locales, incluyendo auditorias en impuestos internos y de comercio exterior, actos administrativos, procedimientos sancionadores, resoluciones que niegan el reembolso de impuestos y leyes que violan las garantías individuales de los contribuyentes.{% endblocktrans %}</p>
+
+<h4>{% trans "Impuestos Internacionales" %}</h4>
+<p>{% blocktrans %}Contamos con vasta experiencia asesorando a clientes en transacciones internacionales, buscando siempre ofrecer estructuras que les permitan ser más eficientes. Nuestros abogados cuentan con experiencia asesorando a la industria maquiladora que generalmente involucra operaciones transnacionales. Contar con experiencia contable nos permite dar una mejor asesoría a nuestros clientes tomando siempre en cuenta el aspecto financiero y actuando dentro del marco de las Normas de Información Financieras Internacionales.{% endblocktrans %}</p>
+
+<h4>{% trans "Transacciones" %}</h4>
+<p>{% blocktrans %}Nuestros abogados cuentan con experiencia asesorando en reorganizaciones, fusiones, escisiones, compra y venta de negocios y otras transferencias que involucran cuestiones fiscales.{% endblocktrans %}</p>
+
+<h4>{% trans "Seguridad Social" %}</h4>
+<p>{% blocktrans %}Nuestros servicios incluyen asesoría y litigio en materia de seguridad social. Asesoramos a empresas en el cumplimiento de sus obligaciones obrero patronales, determinación de prestaciones que tengan menor impacto fiscal, elaboración de planes de previsión social y en auditorias que se hayan iniciado en su contra.{% endblocktrans %}</p>
+
+<h4>{% trans "Impuestos Maquiladora" %}</h4>
+<p>{% blocktrans %}Nuestros servicios se extienden a la recuperación de saldos a favor mediante la solicitud de devolución o compensación que se solicite a las autoridades fiscales. Determinación del Impuesto al Valor Agregado e Impuesto Sobre la Renta y aplicación de incentivos. Nuestra experiencia en este sector nos ha permitido asesorar a nuestros clientes de manera efectiva para mantener su estatus de maquila mediante el cumplimiento de diversas regulaciones gubernamentales.{% endblocktrans %}</p>
+        </div>
+      </div><!-- /# end post -->
+
+      <div class="clearfix divider_line9 lessm"></div>
+      <div class="clearfix mar_top2"></div>
+    </div><!-- end content left side -->
+
+    <!-- right sidebar starts -->
+    <div class="right_sidebar">
+      <div class="sidebar_widget">
+        <div class="sidebar_title"><h4>{% trans "Áreas" %} <i>{% trans "de Práctica" %}</i></h4></div>
+        <ul class="arrows_list1">
+          <li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>
+          <li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>
+        </ul>
+      </div><!-- end section -->
+    </div><!-- end right sidebar -->
+
+  </div>
+</div>
+{% endblock content %}

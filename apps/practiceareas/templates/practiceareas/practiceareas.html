@@ -1,0 +1,36 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Practice Areas" %}{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/portal/aboutareas.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<h1 class="practice-title">{% trans "Practice Areas" %}</h1>
+
+<div class="practice-areas-grid">
+  <a href="{% url 'practiceareas:derechocivil' %}" class="practice-card" style="background-image: url('{% static 'images/derechocivil.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Civil" %}</span>
+  </a>
+  <a href="{% url 'practiceareas:derechopenal' %}" class="practice-card" style="background-image: url('{% static 'images/derechopenal.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Penal" %}</span>
+  </a>
+  <a href="{% url 'practiceareas:derechofamiliar' %}" class="practice-card" style="background-image: url('{% static 'images/derechofamiliar.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Familiar" %}</span>
+  </a>
+  <a href="{% url 'practiceareas:derechomercantil' %}" class="practice-card" style="background-image: url('{% static 'images/derechomercantil.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span>
+  </a>
+  <a href="{% url 'practiceareas:derecholaboral' %}" class="practice-card" style="background-image: url('{% static 'images/derecholaboral.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Laboral" %}</span>
+  </a>
+  <a href="{% url 'practiceareas:derechofiscal' %}" class="practice-card" style="background-image: url('{% static 'images/derechofiscal.jpg' %}');">
+    <span class="practice-name">{% trans "Derecho Fiscal" %}</span>
+  </a>
+</div>
+
+{% endblock content %}

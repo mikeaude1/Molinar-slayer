@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+local_settings.py
+staticfiles/
+media/
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Packaging
+*.egg-info/
+.eggs/
+
+# Tests
+.pytest_cache/
+.coverage
+
+# Node
+node_modules/
+
+# OS/Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Database
+*.sqlite3
+
+# Compiled translation files
+*.mo
+
+# Others
+*.bak
+*.tmp

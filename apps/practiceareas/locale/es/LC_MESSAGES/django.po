@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-05 19:48-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+
+msgid "Derecho Civil"
+msgstr ""
+
+msgid "Civil"
+msgstr ""
+
+msgid "Contratos"
+msgstr ""
+
+msgid ""
+"Redacción, revisión y negociación de contratos civiles; interpretación de "
+"cláusulas, cumplimiento y resolución de controversias contractuales."
+msgstr ""
+
+msgid "Responsabilidad Civil"
+msgstr ""
+
+msgid ""
+"Reclamaciones por daño y perjuicio, responsabilidad objetiva y subjetiva, "
+"asesoría en prevención y reparación de daños."
+msgstr ""
+
+msgid "Propiedad y Bienes"
+msgstr ""
+
+msgid ""
+"Propiedad, posesión y servidumbres; acciones reivindicatorias, deslinde y "
+"asesoría en transmisión de bienes."
+msgstr ""
+
+msgid "Sucesiones"
+msgstr ""
+
+msgid ""
+"Testamentos, sucesión legítima, juicios sucesorios y administración de "
+"herencias."
+msgstr ""
+
+msgid "Solución de Controversias (Litigio y MASC)"
+msgstr ""
+
+msgid ""
+"Estrategia de litigio civil, mediación y conciliación, preparación de "
+"evidencia y ejecución de sentencias."
+msgstr ""
+
+msgid "Áreas"
+msgstr ""
+
+msgid "de Práctica"
+msgstr ""
+
+msgid "Derecho Penal"
+msgstr ""
+
+msgid "Derecho Familiar"
+msgstr ""
+
+msgid "Derecho Mercantil/Corporativo"
+msgstr ""
+
+msgid "Derecho Laboral"
+msgstr ""
+
+msgid "Derecho Fiscal"
+msgstr ""
+
+msgid "Familiar"
+msgstr ""
+
+msgid "Divorcio"
+msgstr ""
+
+msgid ""
+"Divorcio voluntario y necesario, convenios, liquidación de sociedad conyugal "
+"y acuerdos patrimoniales."
+msgstr ""
+
+msgid "Guarda y Custodia"
+msgstr ""
+
+msgid ""
+"Procedimientos sobre guarda, custodia y convivencias, priorizando el interés "
+"superior de niñas y niños."
+msgstr ""
+
+msgid "Pensión alimenticia"
+msgstr ""
+
+msgid ""
+"Fijación, actualización y ejecución de pensiones alimenticias; medidas de "
+"apremio."
+msgstr ""
+
+msgid "Adopciones"
+msgstr ""
+
+msgid "Asesoría integral en procesos de adopción nacional e internacional."
+msgstr ""
+
+msgid "Violencia familiar"
+msgstr ""
+
+msgid ""
+"Órdenes de protección, medidas urgentes y acompañamiento legal y psicológico."
+msgstr ""
+
+msgid "Fiscal"
+msgstr ""
+
+msgid "Litigio Fiscal"
+msgstr ""
+
+msgid ""
+"Nuestra firma cuenta con una sólida práctica de litigio fiscal respecto a "
+"cualquier controversia que se suscite con autoridades federales, estatales y "
+"locales, incluyendo auditorias en impuestos internos y de comercio exterior, "
+"actos administrativos, procedimientos sancionadores, resoluciones que niegan "
+"el reembolso de impuestos y leyes que violan las garantías individuales de "
+"los contribuyentes."
+msgstr ""
+
+msgid "Impuestos Internacionales"
+msgstr ""
+
+msgid ""
+"Contamos con vasta experiencia asesorando a clientes en transacciones "
+"internacionales, buscando siempre ofrecer estructuras que les permitan ser "
+"más eficientes. Nuestros abogados cuentan con experiencia asesorando a la "
+"industria maquiladora que generalmente involucra operaciones "
+"transnacionales. Contar con experiencia contable nos permite dar una mejor "
+"asesoría a nuestros clientes tomando siempre en cuenta el aspecto financiero "
+"y actuando dentro del marco de las Normas de Información Financieras "
+"Internacionales."
+msgstr ""
+
+msgid "Transacciones"
+msgstr ""
+
+msgid ""
+"Nuestros abogados cuentan con experiencia asesorando en reorganizaciones, "
+"fusiones, escisiones, compra y venta de negocios y otras transferencias que "
+"involucran cuestiones fiscales."
+msgstr ""
+
+msgid "Seguridad Social"
+msgstr ""
+
+msgid ""
+"Nuestros servicios incluyen asesoría y litigio en materia de seguridad "
+"social. Asesoramos a empresas en el cumplimiento de sus obligaciones obrero "
+"patronales, determinación de prestaciones que tengan menor impacto fiscal, "
+"elaboración de planes de previsión social y en auditorias que se hayan "
+"iniciado en su contra."
+msgstr ""
+
+msgid "Impuestos Maquiladora"
+msgstr ""
+
+msgid ""
+"Nuestros servicios se extienden a la recuperación de saldos a favor mediante "
+"la solicitud de devolución o compensación que se solicite a las autoridades "
+"fiscales. Determinación del Impuesto al Valor Agregado e Impuesto Sobre la "
+"Renta y aplicación de incentivos. Nuestra experiencia en este sector nos ha "
+"permitido asesorar a nuestros clientes de manera efectiva para mantener su "
+"estatus de maquila mediante el cumplimiento de diversas regulaciones "
+"gubernamentales."
+msgstr ""
+
+msgid "Laboral"
+msgstr ""
+
+msgid "Relaciones individuales de trabajo"
+msgstr ""
+
+msgid ""
+"Contratación, terminación, modificación de condiciones y estrategias de "
+"prevención de conflictos."
+msgstr ""
+
+msgid "Cumplimiento y auditorías"
+msgstr ""
+
+msgid ""
+"Auditorías laborales, cumplimiento con la LFT, NOMs y políticas internas."
+msgstr ""
+
+msgid "Litigio laboral"
+msgstr ""
+
+msgid ""
+"Defensa ante tribunales laborales y conciliación; estrategias probatorias y "
+"negociación."
+msgstr ""
+
+msgid "Seguridad e higiene"
+msgstr ""
+
+msgid ""
+"Cumplimiento de normas de seguridad y salud en el trabajo, inspecciones y "
+"programas preventivos."
+msgstr ""
+
+msgid "Negociación colectiva"
+msgstr ""
+
+msgid ""
+"Relación con sindicatos, contratos colectivos, revisiones y gestión de "
+"conflictos."
+msgstr ""
+
+msgid "Mercantil/Corporativo"
+msgstr ""
+
+msgid "Sociedades y Gobierno Corporativo"
+msgstr ""
+
+msgid ""
+"Constitución de sociedades, reformas estatutarias, asambleas y cumplimiento "
+"corporativo."
+msgstr ""
+
+msgid "Contratos Comerciales"
+msgstr ""
+
+msgid ""
+"Negociación y redacción de contratos de suministro, distribución, agencia y "
+"franquicia."
+msgstr ""
+
+msgid "Fusiones y Adquisiciones (M&A)"
+msgstr ""
+
+msgid ""
+"Due diligence, estructuración, negociación y cierre de operaciones de compra-"
+"venta."
+msgstr ""
+
+msgid "Insolvencia y Reestructura"
+msgstr ""
+
+msgid ""
+"Estrategias de reestructura, concursos mercantiles y recuperación de "
+"créditos."
+msgstr ""
+
+msgid "Cumplimiento y Prevención de Riesgos"
+msgstr ""
+
+msgid ""
+"Mapeo y mitigación de riesgos legales, políticas internas y capacitación."
+msgstr ""
+
+msgid "Penal"
+msgstr ""
+
+msgid "Defensa Penal"
+msgstr ""
+
+msgid ""
+"Asesoría y representación en todas las etapas del proceso penal, desde "
+"investigación inicial hasta juicio oral."
+msgstr ""
+
+msgid "Delitos Económicos"
+msgstr ""
+
+msgid ""
+"Fraude, abuso de confianza, operaciones ilícitas; defensa y prevención en "
+"entornos corporativos."
+msgstr ""
+
+msgid "Medidas Cautelares"
+msgstr ""
+
+msgid ""
+"Audiencias y solicitudes de medidas cautelares, revisión y modificación, "
+"protección de derechos."
+msgstr ""
+
+msgid "Juicio de Amparo"
+msgstr ""
+
+msgid ""
+"Promoción de juicios de amparo contra actos de autoridad que vulneren "
+"derechos fundamentales."
+msgstr ""
+
+msgid "Compliance Penal"
+msgstr ""
+
+msgid ""
+"Diseño e implementación de programas de cumplimiento para prevenir riesgos "
+"penales en organizaciones."
+msgstr ""
+
+msgid "Practice Areas"
+msgstr ""

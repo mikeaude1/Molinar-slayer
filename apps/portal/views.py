@@ -1,0 +1,9 @@
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    return render(request, 'portal/index.html')
+
+def aboutus(request):
+    return render(request, 'portal/aboutus.html')
+

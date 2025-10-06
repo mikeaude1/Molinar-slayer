@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-05 19:48-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid ""
+"Founded in 1995, the firm aims to provide quality advice and legal "
+"representation to domestic and foreign clients seeking to do business in our "
+"country. We offer our services through a team of lawyers committed to "
+"meeting our clients' needs. We have therefore strived to build a first-class "
+"firm and provide excellent service, with transparency, ethics, trust, and "
+"the solidity of 20 years of experience behind us."
+msgstr ""
+"Founded in 1995, the firm aims to provide quality advice and legal "
+"representation to domestic and foreign clients seeking to do business in our "
+"country. We offer our services through a team of lawyers committed to "
+"meeting our clients' needs. We have therefore strived to build a first-class "
+"firm and provide excellent service, with transparency, ethics, trust, and "
+"the solidity of 20 years of experience behind us."
+
+msgid "Mission"
+msgstr "Mission"
+
+msgid ""
+"To provide quality advice and legal representation to domestic and foreign "
+"clients seeking to do business in our country. "
+msgstr ""
+"To provide quality advice and legal representation to domestic and foreign "
+"clients seeking to do business in our country. "
+
+msgid ""
+"We strive to meet our clients' needs and build a first-class firm, with "
+"transparency, ethics, trust, and the solidity of 20 years of experience."
+msgstr ""
+"We strive to meet our clients' needs and build a first-class firm, with "
+"transparency, ethics, trust, and the solidity of 20 years of experience."
+
+msgid "Vision"
+msgstr "Vision"
+
+msgid ""
+"To be a leading firm in the field of criminal defense, known for our quality "
+"service, transparency, ethics, trust, and the solidity of 20 years of "
+"experience. "
+msgstr ""
+"To be a leading firm in the field of criminal defense, known for our quality "
+"service, transparency, ethics, trust, and the solidity of 20 years of "
+"experience. "
+
+msgid ""
+"We aim to provide our clients with the best possible service, and to build a "
+"strong relationship based on trust and transparency."
+msgstr ""
+"We aim to provide our clients with the best possible service, and to build a "
+"strong relationship based on trust and transparency."
+
+msgid "Values"
+msgstr "Values"
+
+msgid "Quality"
+msgstr "Quality"
+
+msgid "Transparency"
+msgstr "Transparency"
+
+msgid "Ethics"
+msgstr "Ethics"
+
+msgid "Trust"
+msgstr "Trust"
+
+msgid "20 Years of Experience"
+msgstr "20 Years of Experience"
+
+msgid "Jesus Molinar Alcaraz - Criminal Defense Lawyer"
+msgstr "Jesus Molinar Alcaraz - Criminal Defense Lawyer"
+
+msgid "Justice, Diligence, and Results"
+msgstr "Justice, Diligence, and Results"
+
+msgid "Your trusted advocate in criminal defense. Get the expert legal"
+msgstr "Your trusted advocate in criminal defense. Get the expert legal"
+
+msgid "representation you deserve."
+msgstr "representation you deserve."
+
+msgid "Request a Free Consultation"
+msgstr "Request a Free Consultation"
+
+msgid "About Jesus Molinar Alcaraz"
+msgstr "About Jesus Molinar Alcaraz"
+
+msgid "Jesus Molinar Alcaraz is a seasoned criminal defense attorney with"
+msgstr "Jesus Molinar Alcaraz is a seasoned criminal defense attorney with"
+
+msgid "a proven track record of success. His expertise covers a wide"
+msgstr "a proven track record of success. His expertise covers a wide"
+
+msgid "range of criminal cases, from misdemeanors to serious felonies."
+msgstr "range of criminal cases, from misdemeanors to serious felonies."
+
+msgid "With a commitment to justice and client advocacy, Jesus provides"
+msgstr "With a commitment to justice and client advocacy, Jesus provides"
+
+msgid "personalized and aggressive defense strategies tailored to each"
+msgstr "personalized and aggressive defense strategies tailored to each"
+
+msgid "unique case."
+msgstr "unique case."
+
+msgid "Go to About Us"
+msgstr "Go to About Us"
+
+msgid "Practice Areas"
+msgstr "Practice Areas"
+
+msgid "Criminal Defense"
+msgstr "Criminal Defense"
+
+msgid "DUI Defense"
+msgstr "DUI Defense"
+
+msgid "Appeals"
+msgstr "Appeals"
+
+msgid "see more"
+msgstr "see more"
+
+msgid "Request a Consultation"
+msgstr "Request a Consultation"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Your name"
+msgstr "Your name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Your email"
+msgstr "Your email"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Tell us about your case"
+msgstr "Tell us about your case"
+
+msgid "Send Request"
+msgstr "Send Request"
