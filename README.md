@@ -8,7 +8,7 @@ Sitio web del despacho legal construido con Django, internacionalización ES/EN,
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-Framework-092E20?logo=django&logoColor=white)](https://www.djangoproject.com/)
-![i18n](https://img.shields.io/badge/i18n-gettext-0088CC)
+[![i18n](https://img.shields.io/badge/i18n-gettext-0088CC)](https://docs.python.org/3/library/gettext.html)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 [![Repo](https://img.shields.io/badge/GitHub-mikeaude1%2FMolinar--slayer-000000?logo=github)](https://github.com/mikeaude1/Molinar-slayer)
 
