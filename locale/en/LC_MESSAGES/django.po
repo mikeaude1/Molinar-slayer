@@ -416,3 +416,27 @@ msgstr ""
 
 #~ msgid "Fiscal"
 #~ msgstr "Tax"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Noticias, artículos y recursos legales para ti"
+msgstr "News, articles, and legal resources for you"
+
+msgid "Leer más"
+msgstr "Read more"
+
+msgid "No hay publicaciones aún."
+msgstr "No posts yet."
+
+msgid "Testimonios de clientes"
+msgstr "Client Testimonials"
+
+msgid "Lo que dicen nuestros clientes"
+msgstr "What our clients say"
+
+msgid "Aún no hay testimonios publicados."
+msgstr "No testimonials published yet."
+
+msgid "Ver blog"
+msgstr "View blog"

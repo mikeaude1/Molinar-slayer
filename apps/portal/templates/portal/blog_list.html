@@ -1,0 +1,75 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Blog" %}{% endblock title %}
+{% block styles%}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/portal/blog.css' %}" />
+{% endblock styles %}
+{% block content %}
+<section class="blog-hero">
+  <div class="container">
+    <h1 class="blog-title">{% trans "Blog" %}</h1>
+    <p class="blog-subtitle">{% trans "Noticias, artículos y recursos legales para ti" %}</p>
+  </div>
+</section>
+<section class="blog-list container">
+  <div class="grid">
+    {% for post in posts %}
+    <article class="blog-card card" style="text-align:center;">
+      {% if post.image_url %}
+      <img src="{{ post.image_url }}" class="blog-card-image" alt="{{ post.title_display }}" />
+      {% endif %}
+      <div class="blog-card-body">
+        <h2 class="blog-card-title"><a href="{% url 'blog_detail' post.slug %}">{{ post.title_display }}</a></h2>
+        {% if post.excerpt_display %}<p class="blog-card-excerpt">{{ post.excerpt_display }}</p>{% endif %}
+        <a class="blog-card-link" href="{% url 'blog_detail' post.slug %}">{% trans "Leer más" %}</a>
+      </div>
+    </article>
+    {% empty %}
+    <p class="empty">{% trans "No hay publicaciones aún." %}</p>
+    {% endfor %}
+  </div>
+</section>
+<section class="testimonials container">
+  <h2 class="section-title">{% trans "Testimonios de clientes" %}</h2>
+  <div class="testimonials-carousel">
+    <div class="marquee-track">
+      {% for t in testimonials %}
+      <div class="testimonial-card card">
+        <div class="testimonial-header">
+          {% if t.avatar_url %}
+          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
+          {% else %}
+          <div class="avatar placeholder">{{ t.client_name|first }}</div>
+          {% endif %}
+          <div class="meta">
+            <span class="name">{{ t.client_name }}</span>
+            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
+            <span class="rating">⭐ {{ t.rating }}/5</span>
+          </div>
+        </div>
+        <p class="testimonial-content">{{ t.content_display }}</p>
+      </div>
+      {% endfor %}
+      {% for t in testimonials %}
+      <div class="testimonial-card card">
+        <div class="testimonial-header">
+          {% if t.avatar_url %}
+          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
+          {% else %}
+          <div class="avatar placeholder">{{ t.client_name|first }}</div>
+          {% endif %}
+          <div class="meta">
+            <span class="name">{{ t.client_name }}</span>
+            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
+            <span class="rating">⭐ {{ t.rating }}/5</span>
+          </div>
+        </div>
+        <p class="testimonial-content">{{ t.content_display }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

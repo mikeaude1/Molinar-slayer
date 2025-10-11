@@ -1,0 +1,46 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{{ post.title_display }}{% endblock title %}
+{% block styles%}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/portal/blog.css' %}" />
+{% endblock styles %}
+{% block content %}
+<article class="post container">
+  <header class="post-header">
+    <h1 class="post-title">{{ post.title_display }}</h1>
+    <time class="post-date" datetime="{{ post.created_at|date:'c' }}">{{ post.created_at|date:"d/m/Y" }}</time>
+  </header>
+  {% if post.image_url %}
+  <img src="{{ post.image_url }}" alt="{{ post.title_display }}" class="post-image" />
+  {% endif %}
+  <div class="post-content">
+    {{ post.content_display|linebreaks }}
+  </div>
+</article>
+<section class="testimonials container">
+  <h2 class="section-title">{% trans "Lo que dicen nuestros clientes" %}</h2>
+  <div class="testimonials-grid">
+    {% for t in testimonials %}
+    <div class="testimonial-card card">
+      <div class="testimonial-header">
+        {% if t.avatar_url %}
+        <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
+        {% else %}
+        <div class="avatar placeholder">{{ t.client_name|first }}</div>
+        {% endif %}
+        <div class="meta">
+          <span class="name">{{ t.client_name }}</span>
+          {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
+          <span class="rating">⭐ {{ t.rating }}/5</span>
+        </div>
+      </div>
+      <p class="testimonial-content">{{ t.content }}</p>
+    </div>
+    {% empty %}
+    <p class="empty">{% trans "Aún no hay testimonios publicados." %}</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}
