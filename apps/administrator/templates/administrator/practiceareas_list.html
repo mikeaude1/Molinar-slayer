@@ -1,0 +1,62 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}Áreas de práctica{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Áreas de práctica</h1>
+  <p>Listado de áreas de práctica configuradas en el portal.</p>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div style="margin-top:1rem;">
+    <a class="btn" href="{% url 'administrator:practiceareas_create' %}">Crear nueva área</a>
+  </div>
+
+  {% if areas %}
+  <div style="margin-top:1rem; overflow-x:auto;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Slug</th>
+          <th>Estado</th>
+          <th style="width:220px;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for area in areas %}
+        <tr>
+          <td>{{ area.name }}</td>
+          <td>{{ area.slug }}</td>
+          <td>
+            {% if area.active %}
+              <span class="badge badge-success">Activa</span>
+            {% else %}
+              <span class="badge badge-warning">Inactiva</span>
+            {% endif %}
+          </td>
+          <td>
+            <a class="btn" href="{% url 'administrator:practiceareas_edit' area.id %}">Editar</a>
+            <form action="{% url 'administrator:practiceareas_toggle_active' area.id %}" method="post" style="display:inline-block; margin-left:0.5rem;">
+              {% csrf_token %}
+              {% if area.active %}
+              <button type="submit" class="btn btn-secondary">Desactivar</button>
+              {% else %}
+              <button type="submit" class="btn btn-primary">Activar</button>
+              {% endif %}
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <p style="margin-top:1rem;">No hay áreas de práctica registradas aún.</p>
+  {% endif %}
+</div>
+{% endblock %}

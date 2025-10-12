@@ -24,11 +24,7 @@
           <div class="clearfix"></div>
           <div class="margin_top1"></div>
           <h4>{% trans "Contratos" %}</h4>
-          <p>{% blocktrans %}Redacción, revisión y negociación de contratos civiles; interpretación de cláusulas, cumplimiento y resolución de controversias contractuales.{% endblocktrans %}</p>
-          <h4>{% trans "Responsabilidad Civil" %}</h4>
-          <p>{% blocktrans %}Reclamaciones por daño y perjuicio, responsabilidad objetiva y subjetiva, asesoría en prevención y reparación de daños.{% endblocktrans %}</p>
-          <h4>{% trans "Propiedad y Bienes" %}</h4>
-          <p>{% blocktrans %}Propiedad, posesión y servidumbres; acciones reivindicatorias, deslinde y asesoría en transmisión de bienes.{% endblocktrans %}</p>
+          <p>{% blocktrans %}Redacción, interpretación y ejecución de contratos civiles y mercantiles.{% endblocktrans %}</p>
           <h4>{% trans "Sucesiones" %}</h4>
           <p>{% blocktrans %}Testamentos, sucesión legítima, juicios sucesorios y administración de herencias.{% endblocktrans %}</p>
           <h4>{% trans "Solución de Controversias (Litigio y MASC)" %}</h4>
@@ -45,12 +41,12 @@
       <div class="sidebar_widget">
         <div class="sidebar_title"><h4>{% trans "Áreas" %} <i>{% trans "de Práctica" %}</i></h4></div>
         <ul class="arrows_list1">
-          <li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>
+          {% if 'derechocivil' in active_slugs %}<li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>{% endif %}
+          {% if 'derechopenal' in active_slugs %}<li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>{% endif %}
+          {% if 'derechofamiliar' in active_slugs %}<li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>{% endif %}
+          {% if 'derechomercantil' in active_slugs %}<li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>{% endif %}
+          {% if 'derecholaboral' in active_slugs %}<li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>{% endif %}
+          {% if 'derechofiscal' in active_slugs %}<li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>{% endif %}
         </ul>
       </div><!-- end section -->
     </div><!-- end right sidebar -->

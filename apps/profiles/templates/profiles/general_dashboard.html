@@ -1,0 +1,26 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Panel Principal" %}{% endblock title %}
+
+{% block content %}
+<div class="content_fullwidth">
+  <div class="container">
+    <div class="content_left" style="max-width:900px;margin:0 auto;">
+      <div class="blog_post">
+        <div class="blog_postcontent">
+          <h2 style="margin-bottom:1rem;">{% trans "Panel Principal" %}</h2>
+          <p style="margin-bottom:1rem;">{% trans "Bienvenido a tu panel principal. Desde aquí puedes navegar a las secciones disponibles según tu perfil." %}</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="{% url 'index' %}" class="btn" style="padding:.6rem 1rem;background:#333;color:#fff;border-radius:.25rem;">{% trans "Inicio" %}</a>
+            <a href="{% url 'blog_list' %}" class="btn" style="padding:.6rem 1rem;background:#333;color:#fff;border-radius:.25rem;">{% trans "Blog" %}</a>
+            <a href="{% url 'practiceareas:practiceareas' %}" class="btn" style="padding:.6rem 1rem;background:#333;color:#fff;border-radius:.25rem;">{% trans "Áreas de Práctica" %}</a>
+          </div>
+          <hr style="margin:1.5rem 0;" />
+          <p>{% trans "Si eres abogado o administrador, también verás accesos en el menú superior a tus paneles específicos." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

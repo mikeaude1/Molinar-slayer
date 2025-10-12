@@ -1,0 +1,49 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+
+{% block title %}Panel de Administración{% endblock %}
+
+{% block content %}
+<section>
+  <h1>Bienvenido al Panel de Administración</h1>
+  <p>Desde aquí podrás administrar el contenido del portal y gestionar usuarios, áreas de práctica y blog.</p>
+
+  <div class="cards" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem;">
+    <article class="card">
+      <h2>Usuarios</h2>
+      <p>Crear, editar y modificar usuarios del sistema.</p>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <a class="btn" href="{% url 'administrator:users_list' %}">Listar usuarios</a>
+        <a class="btn" href="{% url 'administrator:users_create' %}">Crear usuario</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Portal</h2>
+      <p>Editar imágenes de fondo y secciones del portal.</p>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <a class="btn" href="{% url 'administrator:portal_bg' %}">Imagen de fondo (Home)</a>
+        <a class="btn" href="{% url 'administrator:aboutus_bg' %}">Imagen de fondo (Acerca de)</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Áreas de Práctica</h2>
+      <p>Gestiona las áreas de práctica visibles en el portal.</p>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <a class="btn" href="{% url 'administrator:practiceareas_list' %}">Listar áreas</a>
+        <a class="btn" href="{% url 'administrator:practiceareas_create' %}">Crear área</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Blog</h2>
+      <p>Administra entradas del blog.</p>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <a class="btn" href="{% url 'administrator:blog_list' %}">Listar entradas</a>
+        <a class="btn" href="{% url 'administrator:blog_create' %}">Crear entrada</a>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock %}

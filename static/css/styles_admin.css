@@ -1,0 +1,87 @@
+/* Estilos exclusivos del panel de administración */
+
+/* Header y branding */
+header.admin-header { display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; background:#111827; color:#fff; }
+header.admin-header .admin-brand { font-weight:700; }
+
+/* Navegación */
+header.admin-header nav.admin-nav { display:flex; gap:0.75rem; align-items:center; }
+header.admin-header nav.admin-nav > a,
+header.admin-header nav.admin-nav > button,
+header.admin-header nav.admin-nav .dropdown > button {
+  color:#fff;
+  text-decoration:none;
+  background:#374151;
+  padding:0.4rem 0.75rem;
+  border-radius:0.375rem;
+  border:none;
+  cursor:pointer;
+  display:inline-block;
+  font-size:0.95rem;
+  font-weight:700; /* bolder */
+}
+header.admin-header nav.admin-nav > a:hover,
+header.admin-header nav.admin-nav > button:hover,
+header.admin-header nav.admin-nav .dropdown > button:hover {
+  background:#4b5563;
+  color:#fff;
+}
+
+/* Container */
+.container { max-width:1100px; margin:0 auto; padding:1rem; }
+
+/* Dropdown */
+header.admin-header nav.admin-nav .dropdown { position:relative; }
+header.admin-header nav.admin-nav .dropdown .dropdown-menu {
+  position:absolute;
+  left:0;
+  top:calc(100% + .35rem);
+  background:#1f2937;
+  border:1px solid #374151;
+  border-radius:0.5rem;
+  min-width:260px;
+  display:none;
+  z-index:1000;
+  padding:.25rem 0;
+}
+/* Enlaces del dropdown */
+header.admin-header nav.admin-nav .dropdown .dropdown-menu a {
+  display:block;
+  padding:0.6rem 0.9rem;
+  color:#fff;
+  background:transparent;
+  text-decoration:none;
+  font-size:0.95rem;
+  font-weight:700; /* bolder */
+}
+header.admin-header nav.admin-nav .dropdown .dropdown-menu a:hover {
+  background:#374151;
+  color:#fff;
+}
+
+/* Vista previa de imágenes en panel admin */
+.image-preview {
+  width: 100%;
+  height: 240px; /* altura controlada para mostrar bien imágenes grandes o pequeñas */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111827; /* fondo oscuro para contraste */
+  border: 1px solid #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta y ajusta para llenar el contenedor */
+  object-position: center; /* centra la imagen */
+  display: block;
+}
+.image-preview--sm { height: 160px; }
+
+/* Ajustes menores del formulario */
+.form .form-field input[type="file"] {
+  display: block;
+  margin-top: 0.5rem;
+}

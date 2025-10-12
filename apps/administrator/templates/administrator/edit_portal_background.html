@@ -1,0 +1,69 @@
+{% extends "administrator/base_admin.html" %}
+{% load i18n %}
+{% block title %}{% trans "Editar fondo del Portal" %}{% endblock title %}
+{% block content %}
+<div class="card">
+  <h1>{% trans "Editar fondo del Portal" %}</h1>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="current-image" style="margin-bottom:1rem;">
+    <h3>{% trans "Imagen actual" %}</h3>
+    {% if settings_obj.home_bg %}
+      <div class="image-preview">
+        <img src="{{ settings_obj.home_bg.url }}" alt="{% trans 'Fondo actual del portal' %}" />
+      </div>
+    {% else %}
+      <p>{% trans "No hay imagen configurada. Se utilizará la imagen por defecto del sitio." %}</p>
+    {% endif %}
+  </div>
+
+  <form method="post" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    <div class="form-field">
+      {{ form.home_bg.label_tag }}
+      {{ form.home_bg }}
+      {% if form.home_bg.errors %}
+        <div class="error">{{ form.home_bg.errors }}</div>
+      {% endif %}
+    </div>
+
+    <!-- Vista previa de la imagen seleccionada antes de guardar -->
+    <div id="selected-home-preview-container" class="image-preview image-preview--sm" style="margin-top:0.75rem; display:none;">
+      <img id="selected-home-preview" alt="{% trans 'Vista previa seleccionada' %}" />
+    </div>
+
+    <div class="form-actions" style="margin-top:1rem;">
+      <button type="submit" class="btn btn-primary">{% trans "Guardar" %}</button>
+      <a href="{% url 'administrator:dashboard' %}" class="btn">{% trans "Cancelar" %}</a>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var input = document.querySelector('input[type="file"][name="home_bg"]');
+    var container = document.getElementById('selected-home-preview-container');
+    var img = document.getElementById('selected-home-preview');
+    if (input && container && img) {
+      input.addEventListener('change', function(e) {
+        var file = e.target.files && e.target.files[0];
+        if (file) {
+          var url = URL.createObjectURL(file);
+          img.src = url;
+          container.style.display = 'block';
+        } else {
+          img.removeAttribute('src');
+          container.style.display = 'none';
+        }
+      });
+    }
+  });
+</script>
+{% endblock content %}

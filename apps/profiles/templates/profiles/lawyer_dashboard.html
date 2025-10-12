@@ -1,0 +1,14 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}{% trans "Perfil de Abogado" %}{% endblock title %}
+{% block content %}
+<div class="card">
+  <h1>{% trans "Panel del Abogado" %}</h1>
+  <p>{% trans "Aquí podrás gestionar tu perfil profesional, áreas de práctica y contenido relevante." %}</p>
+  <ul>
+    <li><a href="{% url 'admin:profiles_profile_changelist' %}">{% trans "Editar mi perfil" %}</a></li>
+    <li><a href="{% url 'admin:practiceareas_practicearea_changelist' %}">{% trans "Áreas de práctica" %}</a></li>
+    <li><a href="{% url 'admin:portal_blogpost_changelist' %}">{% trans "Publicaciones de blog" %}</a></li>
+  </ul>
+</div>
+{% endblock content %}

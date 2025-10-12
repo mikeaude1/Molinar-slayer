@@ -1,0 +1,62 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}Entradas de blog{% endblock %}
+{% block content %}
+<div class="card">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <h1>Entradas de blog</h1>
+    <a class="btn" href="{% url 'administrator:blog_create' %}">Crear nueva</a>
+  </div>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if posts %}
+  <div style="overflow:auto;">
+    <table class="table" style="width:100%; border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th style="text-align:left;">Título</th>
+          <th>Slug</th>
+          <th>Publicado</th>
+          <th>Activo</th>
+          <th>Creado</th>
+          <th>Actualizado</th>
+          <th style="text-align:center;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in posts %}
+        <tr>
+          <td style="text-align:left;">{{ p.title }}</td>
+          <td>{{ p.slug }}</td>
+          <td>{{ p.published|yesno:"Sí,No" }}</td>
+          <td>{{ p.active|yesno:"Sí,No" }}</td>
+          <td>{{ p.created_at }}</td>
+          <td>{{ p.updated_at }}</td>
+          <td style="text-align:center; display:flex; gap:.5rem; justify-content:center;">
+            <a class="btn" href="{% url 'administrator:blog_edit' p.id %}">Editar</a>
+            <form method="post" action="{% url 'administrator:blog_toggle_active' p.id %}" style="display:inline;">
+              {% csrf_token %}
+              {% if p.active %}
+                <button type="submit" class="btn" onclick="return confirm('¿Desactivar esta entrada?');">Desactivar</button>
+              {% else %}
+                <button type="submit" class="btn" onclick="return confirm('¿Activar esta entrada?');">Activar</button>
+              {% endif %}
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+    <p>No hay entradas todavía.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -6,15 +6,24 @@
       <span class="header-logo">{% trans "JMA" %}</span>
     </div>
     <div class="header-title">{% trans "Jesus Molinar Alcaraz" %}</div>
-    <div class="header-right" style="position:relative;">
+    <form action="/i18n/setlang/" method="post" class="lang-selector-form" id="lang-form">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ request.path }}">
+        <select name="language" class="lang-selector" id="lang-select">
+          <option  value="es" {% if request.LANGUAGE_CODE == 'es' %}selected{% endif %}>{% trans "Es" %}</option>
+          <option value="en" {% if request.LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "En" %}</option>
+        </select>
+      </form>
+
+    <div class="header-right">
       <button class="menu-icon" aria-label="Open menu">&#9776;</button>
-      <div id="dropdown-menu" class="dropdown-menu" style="display:none; position:absolute; right:0; top:100%; background:#e5e7eb; box-shadow:0 2px 8px rgba(0,0,0,0.12); border-radius:0.5rem; min-width:180px; z-index:999;">
-        <ul style="list-style:none; margin:0; padding:0;">
-          <li><a href="#" style="display:block; padding:0.75rem 1.25rem; color:rgb(51,51,51); text-decoration:none;">{% trans "Iniciar sesión" %}</a></li>
-          <li><a href="{% url 'index' %}" id="lang-switch" style="display:block; padding:0.75rem 1.25rem; color:rgb(51,51,51); text-decoration:none;">{% trans "home" %}</a></li>
-          <li><a href="{% url 'aboutus' %}" style="display:block; padding:0.75rem 1.25rem; color:rgb(51,51,51); text-decoration:none;">{% trans "Acerca de nosotros" %}</a></li>
-          <li><a href="{% url 'practiceareas:practiceareas' %}" style="display:block; padding:0.75rem 1.25rem; color:rgb(51,51,51); text-decoration:none;">{% trans "Áreas de Práctica" %}</a></li>
-          <li><a href="{% url 'blog_list' %}" style="display:block; padding:0.75rem 1.25rem; color:rgb(51,51,51); text-decoration:none;">{% trans "Blog" %}</a></li>
+      <div id="dropdown-menu" class="dropdown-menu">
+        <ul>
+          <li><a href="{% url 'login' %}">{% trans "Iniciar sesión" %}</a></li>
+          <li><a href="{% url 'index' %}" id="lang-switch">{% trans "home" %}</a></li>
+          <li><a href="{% url 'aboutus' %}">{% trans "Acerca de nosotros" %}</a></li>
+          <li><a href="{% url 'practiceareas:practiceareas' %}">{% trans "Áreas de Práctica" %}</a></li>
+          <li><a href="{% url 'blog_list' %}">{% trans "Blog" %}</a></li>
         </ul>
       </div>
       <script>
@@ -29,15 +38,56 @@
             dropdownMenu.style.display = 'none';
           }
         });
+        // Envío seguro de cambio de idioma vía fetch con CSRF
+        const langSelect = document.getElementById('lang-select');
+        const langForm = document.getElementById('lang-form');
+        function getCookie(name){
+          const value = `; ${document.cookie}`;
+          const parts = value.split(`; ${name}=`);
+          if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+        function computeNextPath(lang){
+          const path = window.location.pathname;
+          const parts = path.split('/');
+          // parts[0] is '', parts[1] may be 'en' or 'es'
+          if (parts.length > 1 && (parts[1] === 'en' || parts[1] === 'es')) {
+            parts[1] = lang;
+          } else {
+            parts.splice(1, 0, lang);
+          }
+          let newPath = parts.join('/');
+          if (!newPath.endsWith('/')) newPath += '/';
+          return newPath + window.location.search + window.location.hash;
+        }
+        langSelect.addEventListener('change', function(){
+          const formData = new FormData(langForm);
+          const selectedLang = langSelect.value;
+          const csrftoken = getCookie('csrftoken');
+          // Evitar múltiples navegaciones
+          langSelect.disabled = true;
+          fetch('/i18n/setlang/', {
+            method: 'POST',
+            headers: {
+              'X-CSRFToken': csrftoken,
+            },
+            body: formData,
+            credentials: 'same-origin',
+          }).then(resp => {
+            const nextPath = computeNextPath(selectedLang);
+            if (resp.ok) {
+              // Redirigir a la ruta con prefijo de idioma actualizado
+              window.location.replace(nextPath);
+            } else {
+              // Fallback: navegación directa
+              langSelect.disabled = false;
+              window.location.href = nextPath;
+            }
+          }).catch(() => {
+            langSelect.disabled = false;
+            window.location.href = computeNextPath(selectedLang);
+          });
+        });
       </script>
     </div>
-    <form action="/i18n/setlang/" method="post" class="lang-selector-form" style="margin-left:2rem;">
-        {% csrf_token %}
-        <input name="next" type="hidden" value="{{ request.path }}">
-        <select name="language" onchange="this.form.submit()" class="lang-selector" style="padding:0.5rem 1.5rem; border-radius:0.5rem; background:#e5e7eb; color:#333; font-size:1rem; border:1px solid #ccc; box-shadow:0 1px 4px rgba(0,0,0,0.08); cursor:pointer;">
-            <option value="es" {% if request.LANGUAGE_CODE == 'es' %}selected{% endif %}>{% trans "Español" %}</option>
-            <option value="en" {% if request.LANGUAGE_CODE == 'en' %}selected{% endif %}>{% trans "English" %}</option>
-        </select>
-    </form>
   </div>
 </header>

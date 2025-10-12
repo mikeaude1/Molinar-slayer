@@ -1,0 +1,117 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}Crear entrada de blog{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Crear entrada de blog</h1>
+  <p>Completa el formulario para publicar una nueva entrada. Si no tienes URL de imagen, puedes subir un archivo.</p>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if form.errors %}
+    <div class="errorlist">
+      <p>Por favor corrige los errores:</p>
+      <ul>
+        {% for field, errors in form.errors.items %}
+          <li><strong>{{ field }}:</strong> {{ errors|striptags }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <form method="post" action="" enctype="multipart/form-data" style="display:grid; gap: .75rem;">
+    {% csrf_token %}
+    <div>
+      <label for="id_title">Título</label>
+      {{ form.title }}
+    </div>
+    <div>
+      <label for="id_slug">Slug</label>
+      {{ form.slug }}
+    </div>
+    <div>
+      <label for="id_excerpt">Extracto</label>
+      {{ form.excerpt }}
+    </div>
+    <div>
+      <label for="id_content">Contenido</label>
+      {{ form.content }}
+    </div>
+    <div>
+      <label for="id_image_url">URL de imagen</label>
+      {{ form.image_url }}
+      <small>Opcional. Si no proporcionas URL, puedes subir una imagen abajo.</small>
+    </div>
+    <div>
+      <label for="id_image">Imagen (subida)</label>
+      {{ form.image }}
+    </div>
+    <div>
+      <label for="id_published">Publicado</label>
+      {{ form.published }}
+    </div>
+    <div>
+      <label for="id_active">Activo</label>
+      {{ form.active }}
+    </div>
+
+    <hr />
+    <h2>Artículos</h2>
+    {% if formset.non_form_errors %}
+      <div class="errorlist">
+        {{ formset.non_form_errors }}
+      </div>
+    {% endif %}
+    {{ formset.management_form }}
+    <div class="articles" style="display:grid; gap:.75rem;">
+      {% for f in formset.forms %}
+        <fieldset class="card" style="padding:.75rem;">
+          <legend>Artículo {{ forloop.counter }}</legend>
+          <div>
+            <label>Orden</label>
+            {{ f.order }}
+          </div>
+          <div>
+            <label>Título (opcional)</label>
+            {{ f.title }}
+          </div>
+          <div>
+            <label>Contenido</label>
+            {{ f.content }}
+          </div>
+          <div>
+            <label>URL de imagen</label>
+            {{ f.image_url }}
+          </div>
+          <div>
+            <label>Imagen (subida)</label>
+            {{ f.image }}
+          </div>
+          {% if f.errors %}
+          <div class="errorlist">
+            {{ f.errors }}
+          </div>
+          {% endif %}
+          {% if f.DELETE %}
+          <div>
+            <label>Eliminar</label>
+            {{ f.DELETE }}
+          </div>
+          {% endif %}
+        </fieldset>
+      {% endfor %}
+    </div>
+
+    <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top: .5rem;">
+      <button type="submit" class="btn">Guardar</button>
+      <a class="btn" href="{% url 'administrator:blog_list' %}">Volver al listado</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

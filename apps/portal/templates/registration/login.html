@@ -1,0 +1,55 @@
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Iniciar sesión" %}{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="content_fullwidth">
+  <div class="container">
+    <div class="content_left login-wrapper" style="max-width:600px;margin:0 auto;">
+      <div class="blog_post">
+        <div class="blog_postcontent">
+          <div class="card login-card">
+            <h2 style="margin-bottom: 1rem;">{% trans "Iniciar sesión" %}</h2>
+            {% if form.errors %}
+              <div class="alert alert-danger" role="alert" style="color:#b00020;margin-bottom:1rem;">
+                {% trans "Por favor verifica tu usuario y contraseña." %}
+              </div>
+            {% endif %}
+            <form method="post" action="">
+              {% csrf_token %}
+              <div class="form_group" style="margin-bottom: 1rem;">
+                <label for="id_username">{% trans "Usuario" %}</label>
+                <input type="text" name="username" id="id_username" required class="form_control" style="width:100%;padding:.5rem;">
+              </div>
+              <div class="form_group" style="margin-bottom: 1rem;">
+                <label for="id_password">{% trans "Contraseña" %}</label>
+                <input type="password" name="password" id="id_password" required class="form_control" style="width:100%;padding:.5rem;">
+              </div>
+              <div class="form_group" style="display:flex;gap:.5rem;align-items:center;margin-bottom:1rem;">
+                <input type="checkbox" name="remember" id="id_remember">
+                <label for="id_remember">{% trans "Recordarme" %}</label>
+              </div>
+              <div class="form_group" style="margin-bottom: 1rem;">
+                <label>{% trans "Verificación" %}</label>
+                {{ form.hcaptcha }}
+              </div>
+              <button type="submit" class="btn" style="padding:.6rem 1rem;background:#333;color:#fff;border:none;border-radius:.25rem;">{% trans "Entrar" %}</button>
+            </form>
+            <!-- hCaptcha JS API -->
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+            <div style="margin-top:1rem;">
+              <a href="#">{% trans "¿Olvidaste tu contraseña?" %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

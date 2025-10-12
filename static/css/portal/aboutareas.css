@@ -35,15 +35,39 @@
   font-weight: 600;
   text-align: center;
 }
+/* Centrado específico para el grid del index */
+.practice-areas-grid--index {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Regla más específica para forzar 3 columnas en el index */
+.practice-areas-grid.practice-areas-grid--index {
+  grid-template-columns: repeat(3, 1fr) !important;
+  justify-content: center;
+}
+/* Contenedor de acciones debajo del grid, centrado */
+.practice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 /* Responsive: 2 columnas en tablets, 1 en móviles */
 @media (max-width: 1024px) {
   .practice-areas-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .practice-areas-grid.practice-areas-grid--index {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 @media (max-width: 600px) {
   .practice-areas-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: 140px;
+  }
+  .practice-areas-grid.practice-areas-grid--index {
+    grid-template-columns: 1fr !important;
   }
 }

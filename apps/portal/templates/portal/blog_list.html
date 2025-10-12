@@ -17,8 +17,10 @@
   <div class="grid">
     {% for post in posts %}
     <article class="blog-card card" style="text-align:center;">
-      {% if post.image_url %}
-      <img src="{{ post.image_url }}" class="blog-card-image" alt="{{ post.title_display }}" />
+      {% if post.image_display_url %}
+      <img src="{{ post.image_display_url }}" class="blog-card-image" alt="{{ post.title_display }}" />
+      {% else %}
+      <img src="{% static 'images/mission.jpg' %}" class="blog-card-image" alt="{{ post.title_display }}" />
       {% endif %}
       <div class="blog-card-body">
         <h2 class="blog-card-title"><a href="{% url 'blog_detail' post.slug %}">{{ post.title_display }}</a></h2>
@@ -31,45 +33,5 @@
     {% endfor %}
   </div>
 </section>
-<section class="testimonials container">
-  <h2 class="section-title">{% trans "Testimonios de clientes" %}</h2>
-  <div class="testimonials-carousel">
-    <div class="marquee-track">
-      {% for t in testimonials %}
-      <div class="testimonial-card card">
-        <div class="testimonial-header">
-          {% if t.avatar_url %}
-          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
-          {% else %}
-          <div class="avatar placeholder">{{ t.client_name|first }}</div>
-          {% endif %}
-          <div class="meta">
-            <span class="name">{{ t.client_name }}</span>
-            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
-            <span class="rating">⭐ {{ t.rating }}/5</span>
-          </div>
-        </div>
-        <p class="testimonial-content">{{ t.content_display }}</p>
-      </div>
-      {% endfor %}
-      {% for t in testimonials %}
-      <div class="testimonial-card card">
-        <div class="testimonial-header">
-          {% if t.avatar_url %}
-          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
-          {% else %}
-          <div class="avatar placeholder">{{ t.client_name|first }}</div>
-          {% endif %}
-          <div class="meta">
-            <span class="name">{{ t.client_name }}</span>
-            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
-            <span class="rating">⭐ {{ t.rating }}/5</span>
-          </div>
-        </div>
-        <p class="testimonial-content">{{ t.content_display }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+
 {% endblock content %}

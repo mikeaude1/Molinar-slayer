@@ -13,24 +13,36 @@
 <h1 class="practice-title">{% trans "Practice Areas" %}</h1>
 
 <div class="practice-areas-grid">
+  {% if 'derechocivil' in active_slugs %}
   <a href="{% url 'practiceareas:derechocivil' %}" class="practice-card" style="background-image: url('{% static 'images/derechocivil.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Civil" %}</span>
   </a>
+  {% endif %}
+  {% if 'derechopenal' in active_slugs %}
   <a href="{% url 'practiceareas:derechopenal' %}" class="practice-card" style="background-image: url('{% static 'images/derechopenal.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Penal" %}</span>
   </a>
+  {% endif %}
+  {% if 'derechofamiliar' in active_slugs %}
   <a href="{% url 'practiceareas:derechofamiliar' %}" class="practice-card" style="background-image: url('{% static 'images/derechofamiliar.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Familiar" %}</span>
   </a>
+  {% endif %}
+  {% if 'derechomercantil' in active_slugs %}
   <a href="{% url 'practiceareas:derechomercantil' %}" class="practice-card" style="background-image: url('{% static 'images/derechomercantil.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span>
   </a>
+  {% endif %}
+  {% if 'derecholaboral' in active_slugs %}
   <a href="{% url 'practiceareas:derecholaboral' %}" class="practice-card" style="background-image: url('{% static 'images/derecholaboral.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Laboral" %}</span>
   </a>
+  {% endif %}
+  {% if 'derechofiscal' in active_slugs %}
   <a href="{% url 'practiceareas:derechofiscal' %}" class="practice-card" style="background-image: url('{% static 'images/derechofiscal.jpg' %}');">
     <span class="practice-name">{% trans "Derecho Fiscal" %}</span>
   </a>
+  {% endif %}
 </div>
 
 {% endblock content %}

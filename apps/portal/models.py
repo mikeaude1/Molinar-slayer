@@ -9,7 +9,10 @@ class BlogPost(models.Model):
     excerpt = models.TextField(blank=True)
     content = models.TextField()
     image_url = models.URLField(blank=True)
+    # Nueva opción: imagen subida al servidor
+    image = models.ImageField(upload_to='portal/blog/', blank=True, null=True)
     published = models.BooleanField(default=True)
+    active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -20,7 +23,7 @@ class BlogPost(models.Model):
     excerpt_en = models.TextField(blank=True)
     content_es = models.TextField(blank=True)
     content_en = models.TextField(blank=True)
-
+    
     class Meta:
         ordering = ['-created_at']
 
@@ -59,6 +62,37 @@ class BlogPost(models.Model):
     def content_display(self):
         return self._pick('content')
 
+    @property
+    def image_display_url(self):
+        """Devuelve la URL de la imagen a mostrar, priorizando la subida local sobre la URL externa."""
+        if self.image:
+            return self.image.url
+        return self.image_url or ''
+
+
+# --- Nuevo: artículos del blog ---
+class BlogArticle(models.Model):
+    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='articles')
+    order = models.PositiveIntegerField(default=0)
+    title = models.CharField(max_length=200, blank=True)
+    content = models.TextField(blank=True)
+    image_url = models.URLField(blank=True)
+    image = models.ImageField(upload_to='portal/blog/articles/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['order', 'created_at']
+
+    def __str__(self):
+        return f"{self.post.title} - Artículo {self.order}"
+
+    @property
+    def image_display_url(self):
+        if self.image:
+            return self.image.url
+        return self.image_url or ''
+
 
 class Testimonial(models.Model):
     client_name = models.CharField(max_length=150)
@@ -70,6 +104,7 @@ class Testimonial(models.Model):
     company = models.CharField(max_length=150, blank=True)
     avatar_url = models.URLField(blank=True)
     published = models.BooleanField(default=True)
+    active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -91,3 +126,17 @@ class Testimonial(models.Model):
         if self.content_es:
             return self.content_es
         return self.content
+
+
+class PortalSettings(models.Model):
+    home_bg = models.ImageField(upload_to='portal/backgrounds/', blank=True, null=True)
+    about_bg = models.ImageField(upload_to='portal/backgrounds/', blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "Portal Settings"
+
+    @classmethod
+    def get_solo(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj

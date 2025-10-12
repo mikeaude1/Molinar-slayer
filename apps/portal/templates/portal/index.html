@@ -1,10 +1,12 @@
 {% extends "includes/base.html" %} {% load i18n %} {% load static %} {% block
 title %}{% trans "Jesus Molinar Alcaraz - Criminal Defense Lawyer" %}{% endblock
-%} {% block styles%}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+%} {% block styles %}
+ <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+ <link rel="stylesheet" href="{% static 'css/portal/blog.css' %}" />
+ <link rel="stylesheet" href="{% static 'css/portal/aboutareas.css' %}?v=2" />
 
-{% endblock styles %} {% block content %}
-<div class="main-bg">
+ {% endblock styles %} {% block content %}
+<div class="main-bg" {% if portal_settings and portal_settings.home_bg %}style="background-image: url('{{ portal_settings.home_bg.url }}');"{% endif %}>
   <div class="main-content">
     <h1 class="main-title">{% trans "Justice, Diligence, and Results" %}</h1>
     <p class="main-desc">
@@ -26,57 +28,64 @@ title %}{% trans "Jesus Molinar Alcaraz - Criminal Defense Lawyer" %}{% endblock
     {% trans "personalized and aggressive defense strategies tailored to each" %}
     {% trans "unique case." %}
   </p>
+  <div class="practice-actions">
   <a type="button" class="about-btn" href="{% url 'aboutus' %}"> {% trans "Go to About Us" %}</a>
+  </div>
 </div>
 <div class="practice-section">
   <h2 class="practice-title">{% trans "Practice Areas" %}</h2>
-  <div class="practice-list">
-    <div class="practice-item card">
-      <svg
-        fill="currentColor"
-        height="24"
-        viewBox="0 0 256 256"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M239.43,133l-32-80h0a8,8,0,0,0-9.16-4.84L136,62V40a8,8,0,0,0-16,0V65.58L54.26,80.19A8,8,0,0,0,48.57,85h0v.06L16.57,165a7.92,7.92,0,0,0-.57,3c0,23.31,24.54,32,40,32s40-8.69,40-32a7.92,7.92,0,0,0-.57-3L66.92,93.77,120,82V208H104a8,8,0,0,0,0,16h48a8,8,0,0,0,0-16H136V78.42L187,67.1,..."
-        />
-      </svg>
-      <span>{% trans "Criminal Defense" %}</span>
-    </div>
-    <div class="practice-item card">
-      <svg
-        fill="currentColor"
-        height="24"
-        viewBox="0 0 256 256"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"
-        />
-      </svg>
-      <span>{% trans "DUI Defense" %}</span>
-    </div>
-    <div class="practice-item card">
-      <svg
-        fill="currentColor"
-        height="24"
-        viewBox="0 0 256 256"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M243.32,116.69l-16-16a16,16,0,0,0-20.84-1.53L156.84,49.52a16,16,0,0,0-1.52-20.84l-16-16a16,16,0,0,0-22.63,0l-64,64a16,16,0,0,0,0,22.63l16,16a16,16,0,0,0,20.83,1.52L96.69,124,31.31,189.38A25,25,0,0,0,66.63,224.7L132,159.32l7.17,7.16a16,16,0,0,0,1.52,20.84l16,16a16,16,0,0,0,22.63,0l64-64a16,16,0,0,0,0-22.63Z"
-        />
-      </svg>
-      <span>{% trans "Appeals" %}</span>
+  <div class="practice-areas-grid practice-areas-grid--index">
+    {% for area in featured_areas %}
+    <a href="{{ area.url }}" class="practice-card" style="background-image: url('{% static area.image %}');">
+      <span class="practice-name">{{ area.label }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="practice-actions">
+    <a type="button" class="practice-btn" href="{% url 'practiceareas:practiceareas' %}"> {% trans "see more" %}</a>
+  </div>
+</div>
+<section class="testimonials container">
+  <h2 class="section-title">{% trans "Testimonios de clientes" %}</h2>
+  <div class="testimonials-carousel">
+    <div class="marquee-track">
+      {% for t in testimonials %}
+      <div class="testimonial-card card">
+        <div class="testimonial-header">
+          {% if t.avatar_url %}
+          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
+          {% else %}
+          <div class="avatar placeholder">{{ t.client_name|first }}</div>
+          {% endif %}
+          <div class="meta">
+            <span class="name">{{ t.client_name }}</span>
+            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
+            <span class="rating">⭐ {{ t.rating }}/5</span>
+          </div>
+        </div>
+        <p class="testimonial-content">{{ t.content_display }}</p>
+      </div>
+      {% endfor %}
+      {% for t in testimonials %}
+      <div class="testimonial-card card">
+        <div class="testimonial-header">
+          {% if t.avatar_url %}
+          <img src="{{ t.avatar_url }}" alt="{{ t.client_name }}" class="avatar" />
+          {% else %}
+          <div class="avatar placeholder">{{ t.client_name|first }}</div>
+          {% endif %}
+          <div class="meta">
+            <span class="name">{{ t.client_name }}</span>
+            {% if t.company %}<span class="company">{{ t.company }}</span>{% endif %}
+            <span class="rating">⭐ {{ t.rating }}/5</span>
+          </div>
+        </div>
+        <p class="testimonial-content">{{ t.content_display }}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
-  <a type="button" class="practice-btn" href="{% url 'practiceareas:practiceareas' %}"> {% trans "see more" %}</a>
-  <a type="button" class="practice-btn" href="{% url 'blog_list' %}"> {% trans "Ver blog" %}</a>
-</div>
+</section>
 <div class="contact-section card" id="contact">
   <h2 class="contact-title">{% trans "Request a Consultation" %}</h2>
   <div class="contact-form">

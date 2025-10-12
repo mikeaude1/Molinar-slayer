@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'captcha',
+    'hcaptcha_field',
 ]
 
 MIDDLEWARE = [
@@ -134,7 +137,25 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
+# Media files (user uploads)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/profiles/login/'
+
+# hCaptcha (production keys via environment variables)
+HCAPTCHA_SITEKEY = os.getenv('HCAPTCHA_SITEKEY', '10000000-ffff-ffff-ffff-000000000001')
+HCAPTCHA_SECRET = os.getenv('HCAPTCHA_SECRET', '0x0000000000000000000000000000000000000000')
+# Optional global widget config (Spanish)
+HCAPTCHA_DEFAULT_CONFIG = {
+    'theme': 'light',
+    'size': 'normal',
+    # language via api params or widget attrs, set via template if needed
+}

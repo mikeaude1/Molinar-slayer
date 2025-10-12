@@ -17,22 +17,20 @@
       <div class="blog_post">
         <div class="blog_postcontent">
           <div class="image_frame">
-            <a href="#"><img src="{% static 'images/derecholaboral.jpg' %}" alt="{% trans 'Laboral' %}"></a>
+            <a href="#"><img src="{% if area.image %}{{ area.image.url }}{% else %}{% static 'images/derecholaboral.jpg' %}{% endif %}" alt="{% trans 'Laboral' %}"></a>
           </div>
           <h3><a href="#">{% trans "Derecho Laboral" %}</a></h3>
 
           <div class="clearfix"></div>
           <div class="margin_top1"></div>
-          <h4>{% trans "Relaciones individuales de trabajo" %}</h4>
-          <p>{% blocktrans %}Contratación, terminación, modificación de condiciones y estrategias de prevención de conflictos.{% endblocktrans %}</p>
-          <h4>{% trans "Cumplimiento y auditorías" %}</h4>
-          <p>{% blocktrans %}Auditorías laborales, cumplimiento con la LFT, NOMs y políticas internas.{% endblocktrans %}</p>
-          <h4>{% trans "Litigio laboral" %}</h4>
-          <p>{% blocktrans %}Defensa ante tribunales laborales y conciliación; estrategias probatorias y negociación.{% endblocktrans %}</p>
-          <h4>{% trans "Seguridad e higiene" %}</h4>
-          <p>{% blocktrans %}Cumplimiento de normas de seguridad y salud en el trabajo, inspecciones y programas preventivos.{% endblocktrans %}</p>
-          <h4>{% trans "Negociación colectiva" %}</h4>
-          <p>{% blocktrans %}Relación con sindicatos, contratos colectivos, revisiones y gestión de conflictos.{% endblocktrans %}</p>
+          <h4>{% trans "Relaciones Individuales y Colectivas" %}</h4>
+          <p>{% blocktrans %}Contratación, rescisión, terminación, negociación colectiva y convenios.{% endblocktrans %}</p>
+          <h4>{% trans "Litigio Laboral" %}</h4>
+          <p>{% blocktrans %}Defensa ante autoridades laborales, juntas y tribunales.{% endblocktrans %}</p>
+          <h4>{% trans "Seguridad Social" %}</h4>
+          <p>{% blocktrans %}IMSS, INFONAVIT, pensiones y cumplimiento normativo.{% endblocktrans %}</p>
+          <h4>{% trans "Políticas y Cumplimiento" %}</h4>
+          <p>{% blocktrans %}Código de ética, protocolos de prevención y capacitación.{% endblocktrans %}</p>
         </div>
       </div><!-- /# end post -->
 
@@ -45,12 +43,12 @@
       <div class="sidebar_widget">
         <div class="sidebar_title"><h4>{% trans "Áreas" %} <i>{% trans "de Práctica" %}</i></h4></div>
         <ul class="arrows_list1">
-          <li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>
-          <li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>
+          {% if 'derechocivil' in active_slugs %}<li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>{% endif %}
+          {% if 'derechopenal' in active_slugs %}<li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>{% endif %}
+          {% if 'derechofamiliar' in active_slugs %}<li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>{% endif %}
+          {% if 'derechomercantil' in active_slugs %}<li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>{% endif %}
+          {% if 'derecholaboral' in active_slugs %}<li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>{% endif %}
+          {% if 'derechofiscal' in active_slugs %}<li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>{% endif %}
         </ul>
       </div><!-- end section -->
     </div><!-- end right sidebar -->

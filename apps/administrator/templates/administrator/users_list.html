@@ -1,0 +1,57 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}Lista de usuarios{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Usuarios</h1>
+  <p>Listado de usuarios del sistema.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Roles</th>
+        <th>Activo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for u in users %}
+      <tr>
+        <td>
+          {% if u.profile.image %}
+            <img src="{{ u.profile.image.url }}" alt="avatar" style="width:40px;height:40px;border-radius:50%;object-fit:cover;" />
+          {% else %}
+            <span style="display:inline-block;width:40px;height:40px;border-radius:50%;background:#ccc;"></span>
+          {% endif %}
+        </td>
+        <td>{{ u.username }}</td>
+        <td>{{ u.first_name }} {{ u.last_name }}</td>
+        <td>{{ u.email }}</td>
+        <td>
+          {% for r in u.profile.roles.all %}
+            <span class="tag">{{ r.name }}</span>
+          {% empty %}
+            -
+          {% endfor %}
+        </td>
+        <td>{{ u.is_active|yesno:"Sí,No" }}</td>
+        <td>
+          <a class="btn" href="{% url 'administrator:users_edit' u.id %}">Editar</a>
+          <a class="btn" href="{% url 'administrator:users_toggle_active' u.id %}">Activar/Desactivar</a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7">No hay usuarios</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div style="margin-top:.75rem;">
+    <a class="btn" href="{% url 'administrator:users_create' %}">Crear usuario</a>
+  </div>
+</div>
+{% endblock %}

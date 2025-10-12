@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{% static 'css/portal/aboutus.css' %}" />
 {% endblock styles %}
 {% block content %}
-<div class="main-bg">
+<div class="main-bg" {% if portal_settings and portal_settings.about_bg %}style="background-image: url('{{ portal_settings.about_bg.url }}');"{% endif %}>
 </div>
   <div class="about-section card">
           <h1 class="about-title ">{% trans "About Us" %}</h1>

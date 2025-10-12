@@ -1,0 +1,93 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Merriweather:wght@400;700;900&amp;family=Roboto:wght@300;400;500;700" onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <title>{% block title %}{% trans "Panel de Administración" %}{% endblock title %}</title>
+    {% block styles %}
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles_admin.css">
+    <style>
+      /* Eliminar estilos inline; se mantienen mínimos si algo es estrictamente necesario */
+    </style>
+    {% endblock styles %}
+  </head>
+  <body>
+    <header class="admin-header">
+      <div class="admin-brand">Panel Admin</div>
+      <nav class="admin-nav">
+        <a href="{% url 'administrator:dashboard' %}">Panel Administrador</a>
+
+        {% with profile=request.user.profile %}
+          {% if request.user.is_superuser or request.user.is_staff or profile and profile.is_admin %}
+            <div class="dropdown">
+              <button type="button" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display==='block')?'none':'block'">Administrar ▾</button>
+              <div class="dropdown-menu">
+                <span style="display:block;padding:.4rem .9rem;color:#9ca3af;">Usuarios</span>
+                <a href="{% url 'administrator:users_create' %}">Agregar usuario</a>
+                <a href="{% url 'administrator:users_list' %}">Editar / modificar usuarios</a>
+                <span style="display:block;padding:.4rem .9rem;color:#9ca3af;">Portal</span>
+                <a href="{% url 'administrator:portal_bg' %}">Imagen de fondo portal</a>
+                <a href="{% url 'administrator:aboutus_bg' %}">Imagen de fondo Acerca de nosotros</a>
+                <a href="{% url 'administrator:practiceareas_list' %}">Áreas de Práctica</a>
+                <a href="{% url 'administrator:blog_list' %}">Blog</a>
+              </div>
+            </div>
+          {% endif %}
+
+          <div class="dropdown">
+            <button type="button" onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display==='block')?'none':'block'">Perfil ▾</button>
+            <div class="dropdown-menu">
+              {% if profile and profile.is_lawyer %}
+                <a href="{% url 'profiles:lawyer_dashboard' %}">Mi Perfil</a>
+                <a href="{% url 'profiles:lawyer_clients' %}">Mis Clientes</a>
+                <a href="{% url 'profiles:lawyer_cases' %}">Mis Asuntos</a>
+                <a href="{% url 'profiles:lawyer_agenda' %}">Mi Agenda</a>
+                <span style="display:block;padding:.4rem .9rem;color:#9ca3af;">Facturas</span>
+                <a href="{% url 'profiles:lawyer_invoices_pending' %}">Pendientes</a>
+                <a href="{% url 'profiles:lawyer_invoices_paid' %}">Pagadas</a>
+              {% elif profile and profile.is_client %}
+                <a href="{% url 'profiles:dashboard' %}">Mi Perfil</a>
+                <a href="#">Mis Asuntos</a>
+                <a href="#">Mis Facturas</a>
+              {% elif profile and profile.is_admin %}
+                <a href="{% url 'administrator:dashboard' %}">Panel de Administrador</a>
+                <a href="{% url 'profiles:dashboard' %}">Panel de Perfil</a>
+              {% else %}
+                <a href="{% url 'profiles:dashboard' %}">Panel Principal</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endwith %}
+
+        <a href="{% url 'profiles:logout' %}" onclick="return confirmLogout(event)">Salir</a>
+      </nav>
+    </header>
+    <div class="container">
+      <main>{% block content %}{% endblock content %}</main>
+    </div>
+    <script>
+      function confirmLogout(e){
+        // Evitar caché del navegador tras logout
+        if(!confirm('¿Deseas cerrar sesión?')){
+          e.preventDefault();
+          return false;
+        }
+        // Al cerrar sesión, pedimos no cachear y luego redirigimos
+        setTimeout(function(){
+          try {
+            if ('caches' in window) {
+              caches.keys().then(function(keys){ keys.forEach(k => caches.delete(k)); });
+            }
+            // Limpia historial de scroll y fuerza recarga desde servidor
+            window.history.replaceState(null, '', window.location.href);
+          } catch(err){}
+        }, 0);
+        return true;
+      }
+    </script>
+  </body>
+</html>

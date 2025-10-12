@@ -1,0 +1,90 @@
+{% extends 'administrator/base_admin.html' %}
+{% load i18n %}
+{% block title %}Editar usuario{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Editar usuario: {{ user_obj.username }}</h1>
+  <p>Modifica los datos del usuario y su perfil.</p>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div>
+        <label>Usuario</label>
+        {{ form.username }}
+      </div>
+      <div>
+        <label>Email</label>
+        {{ form.email }}
+      </div>
+      <div>
+        <label>Nombre</label>
+        {{ form.first_name }}
+      </div>
+      <div>
+        <label>Apellidos</label>
+        {{ form.last_name }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Roles</label>
+        {{ form.roles }}
+      </div>
+      <div>
+        <label>Activo</label>
+        {{ form.active }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Imagen de perfil</label>
+        {{ form.image }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Teléfono</label>
+        {{ form.phone }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Biografía</label>
+        {{ form.bio }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Áreas de práctica</label>
+        {{ form.practice_areas }}
+      </div>
+      <div style="grid-column:1 / -1;">
+        <label>Asignar abogado (para clientes o secretarias)</label>
+        {{ form.assigned_lawyers }}
+      </div>
+      <div>
+        <label>Nueva contraseña</label>
+        {{ form.password1 }}
+      </div>
+      <div>
+        <label>Confirmar nueva contraseña</label>
+        {{ form.password2 }}
+      </div>
+    </div>
+    {% if form.errors %}
+      <div class="form-errors" style="color:#b91c1c;margin-top:1rem;">
+        <p>Hay errores en el formulario. Revise los campos marcados.</p>
+        <ul>
+          {% for field, errors in form.errors.items %}
+            <li><strong>{{ field }}:</strong> {{ errors|striptags }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <div style="margin-top:1rem;display:flex;gap:.5rem;">
+      <button type="submit" class="btn">Guardar cambios</button>
+      <a class="btn" href="{% url 'administrator:users_list' %}">Cancelar</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
