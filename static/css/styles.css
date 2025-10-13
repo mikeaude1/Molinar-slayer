@@ -79,8 +79,10 @@ main {
     transition: background 0.3s, color 0.3s;
 }
 .menu-icon:hover {
-    background-color: hsl(0, 13%, 41%);
-    color: #e3cacad8;
+    background-color: hsl(221, 92%, 35%);
+    color: #fffffffa;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Hero principal */
@@ -190,7 +192,7 @@ main {
     margin-bottom: 2rem;
 }
 .main-btn {
-    background: hwb(0 31% 51% / 0.874);
+    background: hwb(231 22% 21% / 0.874);
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -205,6 +207,8 @@ main {
 .main-btn:hover {
     background: #000000;
     color: #fff;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* About Section */
@@ -338,7 +342,7 @@ main {
     resize: vertical;
 }
 .contact-btn {
-    background: hwb(0 31% 51% / 0.874);
+    background: hwb(231 16% 17% / 0.874);
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -347,12 +351,13 @@ main {
     cursor: pointer;
     font-size: 1rem;
     box-shadow: 0 2px 8px rgba(31,38,135,0.10);
-    transition: background 0.2s;
     margin-top: 1rem;
 }
 .contact-btn:hover {
     background: #000000;
     color: #fff;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Footer */
@@ -412,6 +417,8 @@ a {
 }
 a:hover {
     color: #000000;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Dropdown menu custom styles */
@@ -424,6 +431,16 @@ a:hover {
 }
 .menu-icon {
   background: #e5e7eb !important;
+}
+/* Header logo sizing (reduce 30%) */
+.header-left .header-logo {
+  height: 49px;
+  max-height: 49px;
+  width: auto;
+}
+.header-logo {
+  display: inline-block;
+  object-fit: contain;
 }
 /* Ajuste de color y fondo del dropdown para que coincida con el header */
 .header .dropdown-menu {
@@ -443,6 +460,8 @@ a:hover {
 .dropdown-menu a:hover {
   background: #d1d5db; /* hover suave en gris */
   color: #111827;
+  transform: translateY(-2px);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Utilidades y resets */
@@ -522,6 +541,8 @@ p {
 }
 .social-media-item svg:hover {
     color: #4c5393;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Login card styles */
@@ -598,6 +619,8 @@ p {
 .dropdown-menu a:hover {
     background: #f3f4f6;
     color: #111827;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
 }
 @media (max-width: 480px) {
   .dropdown-menu {

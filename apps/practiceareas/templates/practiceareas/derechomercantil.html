@@ -1,1 +1,60 @@
-{% extends \"includes/base.html\" %}\n{% load i18n %}\n{% load static %}\n\n{% block title %}{% trans \"Derecho Mercantil/Corporativo\" %}{% endblock title %}\n\n{% block styles %}\n<link rel=\"stylesheet\" href=\"{% static 'css/styles.css' %}\" />\n<link rel=\"stylesheet\" href=\"{% static 'css/practiceareas/practiceareas.css' %}\" />\n{% endblock styles %}\n\n{% block content %}\n<div class=\"content_fullwidth\">\n  <div class=\"container\">\n\n    <div class=\"content_left\">\n      <div class=\"blog_post\">\n        <div class=\"blog_postcontent\">\n          <div class=\"image_frame\">\n            <a href=\"#\"><img src=\"{% if area.image %}{{ area.image.url }}{% else %}{% static 'images/derechomercantil.jpg' %}{% endif %}\" alt=\"{% trans 'Mercantil/Corporativo' %}\"></a>\n          </div>\n          <h3><a href=\"#\">{% trans \"Derecho Mercantil/Corporativo\" %}</a></h3>\n\n          <div class=\"clearfix\"></div>\n          <div class=\"margin_top1\"></div>\n          <h4>{% trans \"Constitución y Gobierno Corporativo\" %}</h4>\n          <p>{% blocktrans %}Constitución de sociedades, acuerdos de accionistas, gobierno corporativo, cumplimiento normativo.{% endblocktrans %}</p>\n          <h4>{% trans \"Contratos Mercantiles\" %}</h4>\n          <p>{% blocktrans %}Redacción y negociación de contratos de distribución, suministro, franquicia y joint ventures.{% endblocktrans %}</p>\n          <h4>{% trans \"Litigio Mercantil\" %}</h4>\n          <p>{% blocktrans %}Representación en juicios mercantiles, medidas cautelares, ejecución de títulos de crédito.{% endblocktrans %}</p>\n        </div>\n      </div><!-- /# end post -->\n\n      <div class=\"clearfix divider_line9 lessm\"></div>\n      <div class=\"clearfix mar_top2\"></div>\n    </div><!-- end content left side -->\n\n    <!-- right sidebar starts -->\n    <div class=\"right_sidebar\">\n      <div class=\"sidebar_widget\">\n        <div class=\"sidebar_title\"><h4>{% trans \"Áreas\" %} <i>{% trans \"de Práctica\" %}</i></h4></div>\n        <ul class=\"arrows_list1\">\n          {% if 'derechocivil' in active_slugs %}<li><a href=\"{% url 'practiceareas:derechocivil' %}\"><span class=\"practice-name\">{% trans \"Derecho Civil\" %}</span></a></li>{% endif %}\n          {% if 'derechopenal' in active_slugs %}<li><a href=\"{% url 'practiceareas:derechopenal' %}\"><span class=\"practice-name\">{% trans \"Derecho Penal\" %}</span></a></li>{% endif %}\n          {% if 'derechofamiliar' in active_slugs %}<li><a href=\"{% url 'practiceareas:derechofamiliar' %}\"><span class=\"practice-name\">{% trans \"Derecho Familiar\" %}</span></a></li>{% endif %}\n          {% if 'derechomercantil' in active_slugs %}<li><a href=\"{% url 'practiceareas:derechomercantil' %}\"><span class=\"practice-name\">{% trans \"Derecho Mercantil/Corporativo\" %}</span></a></li>{% endif %}\n          {% if 'derecholaboral' in active_slugs %}<li><a href=\"{% url 'practiceareas:derecholaboral' %}\"><span class=\"practice-name\">{% trans \"Derecho Laboral\" %}</span></a></li>{% endif %}\n          {% if 'derechofiscal' in active_slugs %}<li><a href=\"{% url 'practiceareas:derechofiscal' %}\"><span class=\"practice-name\">{% trans \"Derecho Fiscal\" %}</span></a></li>{% endif %}\n        </ul>\n      </div><!-- end section -->\n    </div><!-- end right sidebar -->\n\n  </div>\n</div>\n{% endblock content %}
+{% extends "includes/base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Derecho Mercantil/Corporativo" %}{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/practiceareas/practiceareas.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="content_fullwidth">
+  <div class="container">
+
+    <div class="content_left">
+      <div class="blog_post">
+        <div class="blog_postcontent">
+          <div class="image_frame">
+            <a href="#"><img src="{% static 'images/derechomercantil.jpg' %}" alt="{% trans 'Mercantil/Corporativo' %}"></a>
+          </div>
+          <h3><a href="#">{% trans "Derecho Mercantil/Corporativo" %}</a></h3>
+
+          <div class="clearfix"></div>
+          <div class="margin_top1"></div>
+          <h4>{% trans "Sociedades y Gobierno Corporativo" %}</h4>
+          <p>{% blocktrans %}Constitución de sociedades, reformas estatutarias, asambleas y cumplimiento corporativo.{% endblocktrans %}</p>
+          <h4>{% trans "Contratos Comerciales" %}</h4>
+          <p>{% blocktrans %}Negociación y redacción de contratos de suministro, distribución, agencia y franquicia.{% endblocktrans %}</p>
+          <h4>{% trans "Fusiones y Adquisiciones (M&A)" %}</h4>
+          <p>{% blocktrans %}Due diligence, estructuración, negociación y cierre de operaciones de compra-venta.{% endblocktrans %}</p>
+          <h4>{% trans "Insolvencia y Reestructura" %}</h4>
+          <p>{% blocktrans %}Estrategias de reestructura, concursos mercantiles y recuperación de créditos.{% endblocktrans %}</p>
+          <h4>{% trans "Cumplimiento y Prevención de Riesgos" %}</h4>
+          <p>{% blocktrans %}Mapeo y mitigación de riesgos legales, políticas internas y capacitación.{% endblocktrans %}</p>
+        </div>
+      </div><!-- /# end post -->
+
+      <div class="clearfix divider_line9 lessm"></div>
+      <div class="clearfix mar_top2"></div>
+    </div><!-- end content left side -->
+
+    <!-- right sidebar starts -->
+    <div class="right_sidebar">
+      <div class="sidebar_widget">
+        <div class="sidebar_title"><h4>{% trans "Áreas" %} <i>{% trans "de Práctica" %}</i></h4></div>
+        <ul class="arrows_list1">
+          {% if 'derechocivil' in active_slugs %}<li><a href="{% url 'practiceareas:derechocivil' %}"><span class="practice-name">{% trans "Derecho Civil" %}</span></a></li>{% endif %}
+          {% if 'derechopenal' in active_slugs %}<li><a href="{% url 'practiceareas:derechopenal' %}"><span class="practice-name">{% trans "Derecho Penal" %}</span></a></li>{% endif %}
+          {% if 'derechofamiliar' in active_slugs %}<li><a href="{% url 'practiceareas:derechofamiliar' %}"><span class="practice-name">{% trans "Derecho Familiar" %}</span></a></li>{% endif %}
+          {% if 'derechomercantil' in active_slugs %}<li><a href="{% url 'practiceareas:derechomercantil' %}"><span class="practice-name">{% trans "Derecho Mercantil/Corporativo" %}</span></a></li>{% endif %}
+          {% if 'derecholaboral' in active_slugs %}<li><a href="{% url 'practiceareas:derecholaboral' %}"><span class="practice-name">{% trans "Derecho Laboral" %}</span></a></li>{% endif %}
+          {% if 'derechofiscal' in active_slugs %}<li><a href="{% url 'practiceareas:derechofiscal' %}"><span class="practice-name">{% trans "Derecho Fiscal" %}</span></a></li>{% endif %}
+        </ul>
+      </div><!-- end section -->
+    </div><!-- end right sidebar -->
+
+  </div>
+</div>
+{% endblock content %}
